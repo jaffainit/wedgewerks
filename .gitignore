@@ -16,3 +16,5 @@ artifacts/
 screenshots/*.png
 screenshots/*.json
 !screenshots/.gitkeep
+.vercel
+.env*
