@@ -20,8 +20,7 @@ function ProductsIndex() {
             Three tools. Each one job. Sold as a subscription.
           </h1>
           <p className="mt-5 max-w-2xl text-lede leading-relaxed text-muted">
-            {studio.manifesto} UserProbe is live. CiteDeck is in the forge.
-            VecClip is next.
+            {studio.manifesto} UserProbe, CiteDeck, and VecClip are live.
           </p>
         </Container>
       </section>

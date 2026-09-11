@@ -57,6 +57,16 @@ export function ProductCard({ product }: { product: Product }) {
 }
 
 export function ProductCta({ product }: { product: Product }) {
+  if (product.url) {
+    return (
+      <Button asChild>
+        <a href={product.url} target="_blank" rel="noreferrer">
+          Open {product.name}
+          <ArrowUpRight className="size-3.5" />
+        </a>
+      </Button>
+    );
+  }
   const label =
     product.status === "live"
       ? "Request access"
