@@ -147,7 +147,7 @@ export const products: Product[] = [
     ],
     metric: "A short captioned MP4 from a brief in one generate.",
     demoLabel: "MP4",
-    url: "https://docbrief-peach.vercel.app",
+    url: "https://docbrief.wedgewerks.win",
   },
 ];
 
