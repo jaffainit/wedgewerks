@@ -120,6 +120,35 @@ export const products: Product[] = [
     demoLabel: "SVG",
     url: "https://vecclip.vercel.app",
   },
+  {
+    slug: "docbrief",
+    index: "04",
+    name: "DocBrief",
+    status: "live",
+    price: "Starter $12 / Creator $36",
+    wedge: "Faceless and solo creators who need a short YouTube documentary without an editor or GPU film studio.",
+    job: "Paste a topic or rough script. Get a polished voiceover script, TTS, B-roll stills, burned-in captions, and a downloadable MP4.",
+    forWhom: "Faceless / solo YouTube creators.",
+    charge: "Free (1 short render). Starter $12/mo. Creator $36/mo via Stripe Checkout.",
+    image: "/brand/docbrief.jpg",
+    imageAlt: "Dark documentary player frame with a caption bar and progress scrubber.",
+    must: [
+      "Brief → polished script",
+      "TTS voiceover when keyed",
+      "B-roll placeholder stills",
+      "Burned-in captions",
+      "Downloadable MP4 + Stripe Starter/Creator",
+    ],
+    mustNot: [
+      "Character-consistent multi-cast GPU video",
+      "Seedance / Kling",
+      "YouTube OAuth publish",
+      "Viducer pixel-clone branding",
+    ],
+    metric: "A short captioned MP4 from a brief in one generate.",
+    demoLabel: "MP4",
+    url: "https://docbrief-peach.vercel.app",
+  },
 ];
 
 export const pipeline = [

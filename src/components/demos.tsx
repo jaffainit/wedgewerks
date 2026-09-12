@@ -180,10 +180,42 @@ export function VecClipDemo() {
   );
 }
 
+
+export function DocBriefDemo() {
+  const steps = [
+    { n: "01", label: "Brief", body: "“Why solo founders burn out on editing”" },
+    { n: "02", label: "Script + TTS", body: "Polished VO · 92s · burned-in captions" },
+    { n: "03", label: "MP4", body: "Download ready — stills + audio muxed" },
+  ];
+  return (
+    <DemoShell label="DocBrief">
+      <ol className="space-y-3">
+        {steps.map((s) => (
+          <li
+            key={s.n}
+            className="flex gap-3 rounded-lg bg-surface px-3 py-3 shadow-[var(--shadow-border)]"
+          >
+            <span className="font-mono text-[11px] tabular-nums text-subtle">{s.n}</span>
+            <div>
+              <p className="text-sm text-fg">{s.label}</p>
+              <p className="mt-0.5 text-sm text-muted">{s.body}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+      <Button className="mt-4 w-full" type="button">
+        Generate MP4
+        <ArrowRight className="size-4" />
+      </Button>
+    </DemoShell>
+  );
+}
+
 export function ProductDemo({ slug }: { slug: string }) {
   if (slug === "userprobe") return <UserProbeDemo />;
   if (slug === "citedeck") return <CiteDeckDemo />;
   if (slug === "vecclip") return <VecClipDemo />;
+  if (slug === "docbrief") return <DocBriefDemo />;
   return null;
 }
 
