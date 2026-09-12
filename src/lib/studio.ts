@@ -75,7 +75,7 @@ export const products: Product[] = [
     forWhom: "Students and bootcamp learners using their own materials.",
     charge: "Pro $12/mo. Free tier included.",
     image: "/brand/citedeck.jpg",
-    imageAlt: "Blank bone index cards under a steel paperweight.",
+    imageAlt: "Dark CiteDeck window: PDF to cited notes, flashcards, and quiz.",
     must: [
       "PDF and PPTX upload",
       "Cited note blocks with pageRef",
@@ -103,7 +103,7 @@ export const products: Product[] = [
     forWhom: "Indie designers and front-end builders.",
     charge: "Pro $19/mo via Stripe Checkout.",
     image: "/brand/vecclip.jpg",
-    imageAlt: "Steel binder clips holding strips of film on a dark bench.",
+    imageAlt: "Dark VecClip window: MP4 to frames to morphing SVG.",
     must: [
       "MP4 upload",
       "Frame→SVG vectorization with path morphing",
