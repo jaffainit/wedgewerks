@@ -90,7 +90,7 @@ export const products: Product[] = [
     ],
     metric: "Cited notes from your own deck in one upload.",
     demoLabel: "Notes",
-    url: "https://citedeck-two.vercel.app",
+    url: "https://citedeck.wedgewerks.win",
   },
   {
     slug: "vecclip",
@@ -118,7 +118,7 @@ export const products: Product[] = [
     ],
     metric: "A looping SVG from a short clip in one export.",
     demoLabel: "SVG",
-    url: "https://vecclip.vercel.app",
+    url: "https://vecclip.wedgewerks.win",
   },
   {
     slug: "docbrief",
