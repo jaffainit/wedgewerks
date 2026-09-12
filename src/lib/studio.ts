@@ -41,7 +41,7 @@ export const products: Product[] = [
     slug: "userprobe",
     index: "01",
     name: "UserProbe",
-    status: "live",
+    status: "next",
     price: "$29/mo",
     wedge: "Solo builders who need research without a research team.",
     job: "Run a five-question async probe and get a job-to-be-done synthesis with pull-quotes in hours, not a quarter.",
@@ -193,32 +193,33 @@ export const crew = [
   {
     name: "Radar",
     title: "TrustMRR scanner",
-    hands: "Evidence pack.",
-    not: "Does not rank the final three or email anyone.",
-    body: "Scans public TrustMRR surfaces and, with a key, the growth and listed feeds. Table first. Never invents MRR.",
+    hands: "Raw evidence pack — listings and numbers only.",
+    not: "Does not rank the final three, draft email, or write product code.",
+    body: "Scans public TrustMRR surfaces and, with a key, the growth and listed feeds. Table first. Never invents MRR. Hands Dispatch a pack — not a ranked shortlist.",
   },
   {
     name: "Dispatch",
     title: "Ranker",
-    hands: "Top 3, build order, email draft.",
-    not: "Does not write app code or deploy.",
-    body: "Feasible in 1–3 days. Clear wedge. Paid checkout imaginable. Kill list: fake-feeling MRR, ChatGPT wrappers with no job, things Forge already shipped.",
+    hands: "Top 3, build order, email draft — not code.",
+    not: "Does not write Forge code, open a repo, or deploy.",
+    body: "Feasible in 1–3 days. Clear wedge. Paid checkout imaginable. Kill list: fake-feeling MRR, ChatGPT wrappers with no job, things Forge already shipped. Ranking and the draft are Dispatch; shipping code is Forge.",
   },
   {
     name: "Forge",
     title: "MVP builder",
-    hands: "Code, repo, preview.",
-    not: "Does not pick a different idea mid-build.",
+    hands: "Landing, auth, core job, Stripe — the code.",
+    not: "Does not pick a different idea mid-build or rescan TrustMRR.",
     body: "One approved product at a time. Smallest paid loop. Asks at most three questions, then builds the smaller interpretation.",
   },
 ] as const;
 
+/** Dated sample — not a live ticker. CiteDeck / VecClip / DocBrief live; UserProbe next. */
 export const logLines = [
-  { time: "07:00", who: "RADAR", text: "scan complete — 11 AI listings, 3 overlap" },
-  { time: "07:20", who: "DISPATCH", text: "ranked top 3 · default winner CiteDeck" },
-  { time: "07:31", who: "HUMAN", text: "approved #1" },
-  { time: "09:00", who: "FORGE", text: "repo citedeck-mvp · landing + checkout in flight" },
-  { time: "17:00", who: "ANCHOR", text: "one MVP, no second build stacked" },
+  { time: "07:00", who: "RADAR", text: "scan complete — 14 AI listings, 2 overlap" },
+  { time: "07:20", who: "DISPATCH", text: "ranked top 3 · default winner UserProbe" },
+  { time: "07:31", who: "HUMAN", text: "hold #1 · CiteDeck · VecClip · DocBrief already live" },
+  { time: "09:00", who: "FORGE", text: "idle — next seat is UserProbe" },
+  { time: "17:00", who: "ANCHOR", text: "catalog: three live · UserProbe next · no second build stacked" },
 ] as const;
 
 export const willNot = [

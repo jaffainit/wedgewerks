@@ -157,8 +157,18 @@ export function renderInstallPageHtml(template, { host, url } = {}) {
     .replaceAll("{{APP_URL}}", escapeHtml(stripInstallParams(url)));
 }
 
+function siteTitleOrNull(cwd = process.cwd()) {
+  try {
+    const raw = readFileSync(join(cwd, OG_SITE_REL_PATH), "utf8");
+    const title = String(JSON.parse(raw)?.title ?? "").trim();
+    return title || null;
+  } catch {
+    return null;
+  }
+}
+
 export function renderWebManifest(hostHeader) {
-  const name = appNameFromHost(hostHeader);
+  const name = siteTitleOrNull() || appNameFromHost(hostHeader);
   return JSON.stringify(
     {
       name,

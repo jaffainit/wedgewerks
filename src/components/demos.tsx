@@ -1,7 +1,6 @@
-import { useMemo, useState } from "react";
-import { ArrowRight, Search } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ArrowRight, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { logLines } from "@/lib/studio";
 
 function DemoShell({
@@ -128,85 +127,204 @@ export function CiteDeckDemo() {
   );
 }
 
-const clips = [
-  { t: "02:14", title: "Checkout fails on empty coupon", tags: "stripe bug" },
-  { t: "08:41", title: "User cannot find export", tags: "nav research" },
-  { t: "12:03", title: "Probe link pasted in Slack", tags: "userprobe" },
-  { t: "19:27", title: "Mobile overflow on price row", tags: "css layout" },
-  { t: "27:02", title: "Founder restates the wedge", tags: "positioning" },
-];
+/** Canned looping morph preview for the VecClip studio demo. */
+function LoopingSvgPreview() {
+  return (
+    <svg
+      viewBox="0 0 240 140"
+      className="h-36 w-full rounded-md bg-bg"
+      role="img"
+      aria-label="Looping SVG preview"
+    >
+      <rect width="240" height="140" fill="#0b0b0a" />
+      <path fill="none" stroke="#c4a574" strokeWidth="2.2">
+        <animate
+          attributeName="d"
+          dur="2.4s"
+          repeatCount="indefinite"
+          values="
+            M40 100 C70 40, 110 40, 140 100 S210 160, 200 70;
+            M40 90 C80 30, 120 50, 150 95 S200 140, 200 60;
+            M40 100 C70 40, 110 40, 140 100 S210 160, 200 70
+          "
+        />
+      </path>
+      <circle cx="48" cy="96" r="4" fill="#f0ece3">
+        <animate
+          attributeName="cy"
+          dur="2.4s"
+          repeatCount="indefinite"
+          values="96;86;96"
+        />
+      </circle>
+      <text
+        x="120"
+        y="128"
+        textAnchor="middle"
+        fill="#8a8578"
+        fontFamily="ui-monospace, monospace"
+        fontSize="9"
+      >
+        morph · loop · drop-in SVG
+      </text>
+    </svg>
+  );
+}
 
 export function VecClipDemo() {
-  const [q, setQ] = useState("");
-  const filtered = useMemo(() => {
-    const needle = q.trim().toLowerCase();
-    if (!needle) return clips;
-    return clips.filter(
-      (c) =>
-        c.title.toLowerCase().includes(needle) ||
-        c.tags.toLowerCase().includes(needle),
-    );
-  }, [q]);
+  const [phase, setPhase] = useState<"idle" | "working" | "done">("idle");
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    if (phase !== "working") return;
+    setProgress(0);
+    const started = Date.now();
+    const id = window.setInterval(() => {
+      const t = Math.min(1, (Date.now() - started) / 1600);
+      setProgress(Math.round(t * 100));
+      if (t >= 1) {
+        window.clearInterval(id);
+        setPhase("done");
+      }
+    }, 40);
+    return () => window.clearInterval(id);
+  }, [phase]);
 
   return (
     <DemoShell label="VecClip">
-      <div className="relative">
-        <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-subtle" />
-        <Input
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-          placeholder="Search recordings — try “stripe” or “wedge”"
-          className="pl-10"
-          aria-label="Search clips"
-        />
+      <div className="rounded-lg bg-surface px-3 py-3 shadow-[var(--shadow-border)]">
+        <p className="font-mono text-[11px] uppercase tracking-wider text-subtle">
+          Input · sample.mp4 · 4.2s · 720p
+        </p>
+        <p className="mt-2 text-sm text-fg">Short product loop → path-morphing SVG</p>
       </div>
-      <ul className="mt-4 divide-y divide-border">
-        {filtered.map((c) => (
-          <li key={c.t} className="flex items-center justify-between gap-3 py-3">
-            <div>
-              <p className="text-sm text-fg">{c.title}</p>
-              <p className="mt-0.5 font-mono text-[11px] uppercase tracking-wider text-subtle">
-                {c.tags}
-              </p>
-            </div>
-            <span className="font-mono text-xs tabular-nums text-muted">{c.t}</span>
-          </li>
-        ))}
-        {filtered.length === 0 ? (
-          <li className="py-6 text-sm text-muted">No clip matches that job.</li>
-        ) : null}
-      </ul>
+
+      {phase === "idle" ? (
+        <Button
+          className="mt-4 w-full"
+          type="button"
+          onClick={() => setPhase("working")}
+        >
+          Convert MP4 → SVG
+          <ArrowRight className="size-4" />
+        </Button>
+      ) : null}
+
+      {phase === "working" ? (
+        <div className="mt-4 space-y-2">
+          <div className="flex justify-between font-mono text-[11px] uppercase tracking-wider text-subtle">
+            <span>Vectorizing frames</span>
+            <span className="tabular-nums">{progress}%</span>
+          </div>
+          <div className="h-1.5 overflow-hidden rounded-full bg-border">
+            <div
+              className="h-full rounded-full bg-accent transition-[width] duration-75"
+              style={{ width: `${progress}%` }}
+            />
+          </div>
+        </div>
+      ) : null}
+
+      {phase === "done" ? (
+        <div className="mt-4 space-y-3">
+          <LoopingSvgPreview />
+          <Button
+            className="w-full"
+            type="button"
+            variant="ghost"
+            onClick={() => {
+              const blob = new Blob(
+                [
+                  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140">
+  <rect width="240" height="140" fill="#0b0b0a"/>
+  <path d="M40 100 C70 40, 110 40, 140 100 S210 160, 200 70" fill="none" stroke="#c4a574" stroke-width="2.2"/>
+</svg>`,
+                ],
+                { type: "image/svg+xml" },
+              );
+              const url = URL.createObjectURL(blob);
+              const a = document.createElement("a");
+              a.href = url;
+              a.download = "vecclip-sample.svg";
+              a.click();
+              URL.revokeObjectURL(url);
+            }}
+          >
+            Download SVG
+            <Download className="size-4" />
+          </Button>
+          <button
+            type="button"
+            className="w-full text-center font-mono text-[11px] uppercase tracking-wider text-subtle hover:text-fg"
+            onClick={() => setPhase("idle")}
+          >
+            Run again
+          </button>
+        </div>
+      ) : null}
     </DemoShell>
   );
 }
 
+const docBriefBeats = [
+  {
+    n: "01",
+    label: "Script",
+    body: "Solo founders don’t need a film crew. They need a voice, a caption, and a cut that ships tonight.",
+  },
+  {
+    n: "02",
+    label: "Caption",
+    body: "Why editing burns founders — 0:00–0:08",
+  },
+  {
+    n: "03",
+    label: "Poster",
+    body: "Still · dark desk · wedge of light · title card ready",
+  },
+];
 
 export function DocBriefDemo() {
-  const steps = [
-    { n: "01", label: "Brief", body: "“Why solo founders burn out on editing”" },
-    { n: "02", label: "Script + TTS", body: "Polished VO · 92s · burned-in captions" },
-    { n: "03", label: "MP4", body: "Download ready — stills + audio muxed" },
-  ];
+  const [ran, setRan] = useState(false);
   return (
     <DemoShell label="DocBrief">
-      <ol className="space-y-3">
-        {steps.map((s) => (
-          <li
-            key={s.n}
-            className="flex gap-3 rounded-lg bg-surface px-3 py-3 shadow-[var(--shadow-border)]"
-          >
-            <span className="font-mono text-[11px] tabular-nums text-subtle">{s.n}</span>
-            <div>
-              <p className="text-sm text-fg">{s.label}</p>
-              <p className="mt-0.5 text-sm text-muted">{s.body}</p>
-            </div>
-          </li>
-        ))}
-      </ol>
-      <Button className="mt-4 w-full" type="button">
+      <div className="rounded-lg bg-surface px-3 py-3 shadow-[var(--shadow-border)]">
+        <p className="font-mono text-[11px] uppercase tracking-wider text-subtle">
+          Brief
+        </p>
+        <p className="mt-2 text-sm text-fg">
+          “Why solo founders burn out on editing”
+        </p>
+      </div>
+      <Button
+        className="mt-4 w-full"
+        type="button"
+        onClick={() => setRan(true)}
+      >
         Generate MP4
         <ArrowRight className="size-4" />
       </Button>
+      {ran ? (
+        <ol className="mt-5 space-y-3 border-t border-border pt-5">
+          {docBriefBeats.map((s) => (
+            <li
+              key={s.n}
+              className="flex gap-3 rounded-lg bg-surface px-3 py-3 shadow-[var(--shadow-border)]"
+            >
+              <span className="font-mono text-[11px] tabular-nums text-subtle">
+                {s.n}
+              </span>
+              <div>
+                <p className="text-sm text-fg">{s.label}</p>
+                <p className="mt-0.5 text-sm text-muted">{s.body}</p>
+              </div>
+            </li>
+          ))}
+          <li className="font-mono text-[11px] uppercase tracking-wider text-accent">
+            Canned three-beat result · MP4 mux stub ready
+          </li>
+        </ol>
+      ) : null}
     </DemoShell>
   );
 }
@@ -224,7 +342,7 @@ export function FactoryLog() {
     <ol className="font-mono text-xs leading-7 text-muted sm:text-sm sm:leading-8">
       {logLines.map((row) => (
         <li
-          key={row.time}
+          key={`${row.time}-${row.who}`}
           className="grid grid-cols-[3.5rem_6.5rem_1fr] gap-3 tabular-nums sm:grid-cols-[4.5rem_8rem_1fr]"
         >
           <span className="text-subtle">{row.time}</span>

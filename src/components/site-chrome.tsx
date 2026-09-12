@@ -145,9 +145,17 @@ export function SiteFooter() {
         </div>
       </Container>
       <div className="border-t border-line">
-        <Container className="flex flex-col gap-2 py-5 font-mono text-[11px] uppercase tracking-[0.14em] text-subtle sm:flex-row sm:justify-between">
+        <Container className="flex flex-col gap-3 py-5 font-mono text-[11px] uppercase tracking-[0.14em] text-subtle sm:flex-row sm:items-center sm:justify-between">
           <span>© {new Date().getFullYear()} {studio.mark}</span>
-          <span>Not a platform · A catalog of jobs</span>
+          <div className="flex flex-wrap gap-4">
+            <Link to="/privacy" className="transition-colors hover:text-fg">
+              Privacy
+            </Link>
+            <Link to="/terms" className="transition-colors hover:text-fg">
+              Terms
+            </Link>
+            <span className="hidden sm:inline">Not a platform · A catalog of jobs</span>
+          </div>
         </Container>
       </div>
     </footer>

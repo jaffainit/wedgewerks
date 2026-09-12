@@ -5,7 +5,14 @@ import { products, studio } from "@/lib/studio";
 
 export const Route = createFileRoute("/products/")({
   head: () => ({
-    meta: [{ title: "Catalog — WedgeWerks™" }],
+    meta: [
+      { title: "Catalog — WedgeWerks™" },
+      {
+        name: "description",
+        content:
+          "WedgeWerks catalog: CiteDeck, VecClip, and DocBrief are live. UserProbe is next. Focused tools, one job each.",
+      },
+    ],
   }),
   component: ProductsIndex,
 });
@@ -20,7 +27,7 @@ function ProductsIndex() {
             Four tools. Each one job. Sold as a subscription.
           </h1>
           <p className="mt-5 max-w-2xl text-lede leading-relaxed text-muted">
-            {studio.manifesto} UserProbe, CiteDeck, VecClip, and DocBrief are live.
+            {studio.manifesto} CiteDeck, VecClip, and DocBrief are live. UserProbe is next.
           </p>
         </Container>
       </section>

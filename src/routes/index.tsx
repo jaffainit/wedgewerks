@@ -12,6 +12,11 @@ export const Route = createFileRoute("/")({
       {
         title: "WedgeWerks™ — Find the wedge. Ship the MVP.",
       },
+      {
+        name: "description",
+        content:
+          "WedgeWerks is a small product factory. We find fast-growing AI wedges, pick one, and ship a paid MVP in days — landing, auth, core job, Stripe.",
+      },
     ],
   }),
   component: Home,
@@ -188,7 +193,7 @@ function Home() {
           </div>
           <div className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)] sm:p-7">
             <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-subtle">
-              Factory log · local
+              Factory log · sample
             </p>
             <div className="mt-5 overflow-x-auto">
               <FactoryLog />

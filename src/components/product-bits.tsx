@@ -67,16 +67,10 @@ export function ProductCta({ product }: { product: Product }) {
       </Button>
     );
   }
-  const label =
-    product.status === "live"
-      ? "Request access"
-      : product.status === "in-forge"
-        ? "Follow the forge"
-        : "Hold a seat";
   return (
     <Button asChild>
       <Link to="/brief" search={{ product: product.slug }}>
-        {label}
+        Request access
         <ArrowUpRight className="size-3.5" />
       </Link>
     </Button>

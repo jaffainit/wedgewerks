@@ -17,6 +17,12 @@ export const Route = createFileRoute("/products/$slug")({
           ? `${loaderData.product.name} — WedgeWerks™`
           : "WedgeWerks™",
       },
+      {
+        name: "description",
+        content: loaderData
+          ? `${loaderData.product.name}: ${loaderData.product.job} ${loaderData.product.price}.`
+          : "WedgeWerks catalog product.",
+      },
     ],
   }),
   component: ProductPage,
@@ -77,8 +83,17 @@ function ProductPage() {
                 <dd className="mt-2 text-sm leading-relaxed text-fg">{product.metric}</dd>
               </div>
             </dl>
-            <div className="mt-10">
+            <div className="mt-10 flex flex-wrap items-center gap-4">
               <ProductCta product={product} />
+              <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-subtle">
+                <Link to="/privacy" className="hover:text-fg">
+                  Privacy
+                </Link>
+                <span className="mx-2">·</span>
+                <Link to="/terms" className="hover:text-fg">
+                  Terms
+                </Link>
+              </span>
             </div>
           </div>
           <ProductDemo slug={product.slug} />
@@ -90,7 +105,7 @@ function ProductPage() {
           <div>
             <SectionLabel>Must</SectionLabel>
             <ul className="mt-5 space-y-3">
-              {product.must.map((item) => (
+              {product.must.map((item: string) => (
                 <li key={item} className="flex gap-3 text-sm leading-relaxed text-fg">
                   <span className="mt-2 size-1.5 shrink-0 rounded-full bg-accent" />
                   {item}
@@ -101,7 +116,7 @@ function ProductPage() {
           <div>
             <SectionLabel>Must not</SectionLabel>
             <ul className="mt-5 space-y-3">
-              {product.mustNot.map((item) => (
+              {product.mustNot.map((item: string) => (
                 <li key={item} className="flex gap-3 text-sm leading-relaxed text-muted">
                   <span className="mt-2 size-1.5 shrink-0 rounded-full bg-border" />
                   {item}

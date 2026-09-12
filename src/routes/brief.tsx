@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input, Label, Textarea } from "@/components/ui/input";
 import { Container, SectionLabel } from "@/components/site-chrome";
 import { BRIEFS_KEY, products } from "@/lib/studio";
+import { submitBrief } from "@/lib/brief-inbox";
 
 const intents = [
   { id: "access", label: "Request access to a tool" },
@@ -46,7 +47,14 @@ export const Route = createFileRoute("/brief")({
     return {};
   },
   head: () => ({
-    meta: [{ title: "Send a brief — WedgeWerks™" }],
+    meta: [
+      { title: "Send a brief — WedgeWerks™" },
+      {
+        name: "description",
+        content:
+          "File a WedgeWerks brief: request access, suggest a wedge, or press. Short jobs only.",
+      },
+    ],
   }),
   component: BriefPage,
 });
@@ -54,6 +62,7 @@ export const Route = createFileRoute("/brief")({
 function BriefPage() {
   const { product: productFromSearch } = Route.useSearch();
   const [receipt, setReceipt] = useState<StoredBrief | null>(null);
+  const [emailed, setEmailed] = useState(false);
 
   const defaultProduct = useMemo(() => {
     if (productFromSearch && products.some((p) => p.slug === productFromSearch)) {
@@ -73,7 +82,7 @@ function BriefPage() {
     },
   });
 
-  function onSubmit(values: BriefValues) {
+  async function onSubmit(values: BriefValues) {
     const entry: StoredBrief = {
       ...values,
       id: crypto.randomUUID(),
@@ -81,6 +90,15 @@ function BriefPage() {
     };
     const next = [entry, ...readBriefs()].slice(0, 20);
     localStorage.setItem(BRIEFS_KEY, JSON.stringify(next));
+
+    let sent = false;
+    try {
+      const result = await submitBrief({ data: entry });
+      sent = result.channel === "email" && result.ok;
+    } catch {
+      sent = false;
+    }
+    setEmailed(sent);
     setReceipt(entry);
   }
 
@@ -99,11 +117,14 @@ function BriefPage() {
               <SectionLabel>Brief filed</SectionLabel>
             </div>
             <h1 className="mt-4 font-display text-headline tracking-tight">
-              Logged. We will not pretend this emailed anyone.
+              {emailed
+                ? "Filed and emailed to the studio inbox."
+                : "Logged on this device. We will not pretend this emailed anyone."}
             </h1>
             <p className="mt-5 leading-relaxed text-muted">
-              This studio site keeps briefs on this device so you can see the
-              loop. Foundary still waits on a human before anything is built.
+              {emailed
+                ? "A copy also stays in localStorage on this browser. Foundary still waits on a human before anything is built."
+                : "No RESEND_API_KEY on the server, so the brief stays local. Foundary still waits on a human before anything is built."}
             </p>
             <dl className="mt-10 space-y-4 rounded-xl bg-surface p-6 shadow-[var(--shadow-border)]">
               <div className="flex justify-between gap-4 text-sm">
@@ -161,6 +182,15 @@ function BriefPage() {
             Access to a live tool, a wedge we should consider, or press. Keep it
             short. If it needs hardware, a marketplace, or a medical core, we
             will pass.
+          </p>
+          <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.14em] text-subtle">
+            <Link to="/privacy" className="hover:text-fg">
+              Privacy
+            </Link>
+            <span className="mx-2">·</span>
+            <Link to="/terms" className="hover:text-fg">
+              Terms
+            </Link>
           </p>
         </Container>
       </section>

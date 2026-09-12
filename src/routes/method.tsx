@@ -6,7 +6,14 @@ import { pipeline } from "@/lib/studio";
 
 export const Route = createFileRoute("/method")({
   head: () => ({
-    meta: [{ title: "Method — WedgeWerks™" }],
+    meta: [
+      { title: "Method — WedgeWerks™" },
+      {
+        name: "description",
+        content:
+          "How WedgeWerks ships: Radar finds TrustMRR wedges, Dispatch ranks, you approve, Forge builds one paid MVP.",
+      },
+    ],
   }),
   component: MethodPage,
 });

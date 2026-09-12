@@ -13,6 +13,8 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as BriefRouteImport } from './routes/brief'
 import { Route as FoundaryRouteImport } from './routes/foundary'
 import { Route as MethodRouteImport } from './routes/method'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as ProductsIndexRouteImport } from './routes/products.index'
 import { Route as ProductsSlugRouteImport } from './routes/products.$slug'
 
@@ -36,6 +38,16 @@ const MethodRoute = MethodRouteImport.update({
   path: '/method',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProductsIndexRoute = ProductsIndexRouteImport.update({
   id: '/products/',
   path: '/products/',
@@ -52,6 +64,8 @@ export interface FileRoutesByFullPath {
   '/brief': typeof BriefRoute
   '/foundary': typeof FoundaryRoute
   '/method': typeof MethodRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
   '/products/$slug': typeof ProductsSlugRoute
   '/products/': typeof ProductsIndexRoute
 }
@@ -60,6 +74,8 @@ export interface FileRoutesByTo {
   '/brief': typeof BriefRoute
   '/foundary': typeof FoundaryRoute
   '/method': typeof MethodRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
   '/products/$slug': typeof ProductsSlugRoute
   '/products': typeof ProductsIndexRoute
 }
@@ -69,21 +85,40 @@ export interface FileRoutesById {
   '/brief': typeof BriefRoute
   '/foundary': typeof FoundaryRoute
   '/method': typeof MethodRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
   '/products/$slug': typeof ProductsSlugRoute
   '/products/': typeof ProductsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/brief' | '/foundary' | '/method' | '/products/$slug' | '/products/'
+    | '/'
+    | '/brief'
+    | '/foundary'
+    | '/method'
+    | '/privacy'
+    | '/terms'
+    | '/products/$slug'
+    | '/products/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/brief' | '/foundary' | '/method' | '/products/$slug' | '/products'
+  to:
+    | '/'
+    | '/brief'
+    | '/foundary'
+    | '/method'
+    | '/privacy'
+    | '/terms'
+    | '/products/$slug'
+    | '/products'
   id:
     | '__root__'
     | '/'
     | '/brief'
     | '/foundary'
     | '/method'
+    | '/privacy'
+    | '/terms'
     | '/products/$slug'
     | '/products/'
   fileRoutesById: FileRoutesById
@@ -93,6 +128,8 @@ export interface RootRouteChildren {
   BriefRoute: typeof BriefRoute
   FoundaryRoute: typeof FoundaryRoute
   MethodRoute: typeof MethodRoute
+  PrivacyRoute: typeof PrivacyRoute
+  TermsRoute: typeof TermsRoute
   ProductsSlugRoute: typeof ProductsSlugRoute
   ProductsIndexRoute: typeof ProductsIndexRoute
 }
@@ -127,6 +164,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MethodRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/products/': {
       id: '/products/'
       path: '/products'
@@ -149,18 +200,11 @@ const rootRouteChildren: RootRouteChildren = {
   BriefRoute: BriefRoute,
   FoundaryRoute: FoundaryRoute,
   MethodRoute: MethodRoute,
+  PrivacyRoute: PrivacyRoute,
+  TermsRoute: TermsRoute,
   ProductsSlugRoute: ProductsSlugRoute,
   ProductsIndexRoute: ProductsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-  }
-}
