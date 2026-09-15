@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BriefRouteImport } from './routes/brief'
+import { Route as DemosRouteImport } from './routes/demos'
 import { Route as FoundaryRouteImport } from './routes/foundary'
 import { Route as MethodRouteImport } from './routes/method'
 import { Route as PrivacyRouteImport } from './routes/privacy'
@@ -26,6 +27,11 @@ const IndexRoute = IndexRouteImport.update({
 const BriefRoute = BriefRouteImport.update({
   id: '/brief',
   path: '/brief',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DemosRoute = DemosRouteImport.update({
+  id: '/demos',
+  path: '/demos',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FoundaryRoute = FoundaryRouteImport.update({
@@ -62,6 +68,7 @@ const ProductsSlugRoute = ProductsSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/brief': typeof BriefRoute
+  '/demos': typeof DemosRoute
   '/foundary': typeof FoundaryRoute
   '/method': typeof MethodRoute
   '/privacy': typeof PrivacyRoute
@@ -72,6 +79,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/brief': typeof BriefRoute
+  '/demos': typeof DemosRoute
   '/foundary': typeof FoundaryRoute
   '/method': typeof MethodRoute
   '/privacy': typeof PrivacyRoute
@@ -83,6 +91,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/brief': typeof BriefRoute
+  '/demos': typeof DemosRoute
   '/foundary': typeof FoundaryRoute
   '/method': typeof MethodRoute
   '/privacy': typeof PrivacyRoute
@@ -95,6 +104,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/brief'
+    | '/demos'
     | '/foundary'
     | '/method'
     | '/privacy'
@@ -105,6 +115,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/brief'
+    | '/demos'
     | '/foundary'
     | '/method'
     | '/privacy'
@@ -115,6 +126,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/brief'
+    | '/demos'
     | '/foundary'
     | '/method'
     | '/privacy'
@@ -126,6 +138,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BriefRoute: typeof BriefRoute
+  DemosRoute: typeof DemosRoute
   FoundaryRoute: typeof FoundaryRoute
   MethodRoute: typeof MethodRoute
   PrivacyRoute: typeof PrivacyRoute
@@ -148,6 +161,13 @@ declare module '@tanstack/react-router' {
       path: '/brief'
       fullPath: '/brief'
       preLoaderRoute: typeof BriefRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/demos': {
+      id: '/demos'
+      path: '/demos'
+      fullPath: '/demos'
+      preLoaderRoute: typeof DemosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/foundary': {
@@ -198,6 +218,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BriefRoute: BriefRoute,
+  DemosRoute: DemosRoute,
   FoundaryRoute: FoundaryRoute,
   MethodRoute: MethodRoute,
   PrivacyRoute: PrivacyRoute,

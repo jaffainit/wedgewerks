@@ -32,6 +32,7 @@ export const studio = {
 
 export const nav = [
   { to: "/products", label: "Catalog" },
+  { to: "/demos", label: "Demos" },
   { to: "/method", label: "Method" },
   { to: "/foundary", label: "Foundary" },
 ] as const;
