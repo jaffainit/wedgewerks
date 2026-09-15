@@ -81,48 +81,125 @@ export function UserProbeDemo() {
   );
 }
 
-const sources = [
-  { id: "S1", title: "TrustMRR AI category — growth sort", kind: "URL" },
-  { id: "S2", title: "Internal memo: one job, one price", kind: "PDF" },
-  { id: "S3", title: "Support transcript — clip search ask", kind: "TXT" },
-  { id: "S4", title: "Stripe Checkout docs (public)", kind: "URL" },
+const lectureNotes = [
+  {
+    text: "The first law of thermodynamics states that energy is conserved.",
+    page: 1,
+  },
+  {
+    text: "Entropy measures the dispersal of energy at a given temperature.",
+    page: 2,
+  },
+  {
+    text: "PV = nRT relates pressure, volume, amount, and temperature.",
+    page: 3,
+  },
+];
+
+const lectureCards = [
+  {
+    front: "What does the first law state?",
+    back: "Energy is conserved.",
+    page: 1,
+  },
+  {
+    front: "For an isolated system, entropy…",
+    back: "Never decreases.",
+    page: 2,
+  },
 ];
 
 export function CiteDeckDemo() {
-  const [open, setOpen] = useState(false);
+  const [tab, setTab] = useState<"notes" | "cards">("notes");
+  const [flipped, setFlipped] = useState(false);
+  const [cardI, setCardI] = useState(0);
+  const card = lectureCards[cardI];
+
   return (
     <DemoShell label="CiteDeck">
-      <ul className="space-y-2">
-        {sources.map((s) => (
-          <li
-            key={s.id}
-            className="flex items-center justify-between gap-3 rounded-md bg-surface px-3 py-2.5 text-sm"
-          >
-            <span className="text-fg">{s.title}</span>
-            <span className="shrink-0 font-mono text-[11px] uppercase tracking-wider text-subtle">
-              {s.id} · {s.kind}
-            </span>
-          </li>
-        ))}
-      </ul>
-      <div className="mt-5">
-        <Button type="button" size="compact" onClick={() => setOpen(true)}>
-          Compose memo
-          <ArrowRight className="size-3.5" />
-        </Button>
+      <p className="mb-4 font-mono text-[11px] uppercase tracking-wider text-subtle">
+        Sample lecture · sample-lecture.pdf · 3 pages
+      </p>
+      <div className="mb-4 flex gap-2">
+        <button
+          type="button"
+          onClick={() => setTab("notes")}
+          className={
+            "rounded-md px-3 py-1.5 text-xs font-medium " +
+            (tab === "notes" ? "bg-accent text-bg" : "bg-surface text-muted")
+          }
+        >
+          Cited notes
+        </button>
+        <button
+          type="button"
+          onClick={() => setTab("cards")}
+          className={
+            "rounded-md px-3 py-1.5 text-xs font-medium " +
+            (tab === "cards" ? "bg-accent text-bg" : "bg-surface text-muted")
+          }
+        >
+          Flashcards
+        </button>
       </div>
-      {open ? (
-        <div className="mt-6 border-t border-border pt-5 text-sm leading-relaxed text-muted">
-          <p>
-            Fast-growing AI wedges are showing up as focused jobs, not platforms.{" "}
-            <span className="text-accent">[S1]</span> A paid loop is landing,
-            auth, the core job, and Checkout — then stop.{" "}
-            <span className="text-accent">[S2][S4]</span> The next ask from
-            support is not another dashboard: it is the twelve seconds that
-            prove the bug. <span className="text-accent">[S3]</span>
-          </p>
+
+      {tab === "notes" ? (
+        <ul className="space-y-2">
+          {lectureNotes.map((n) => (
+            <li
+              key={n.text}
+              className="flex items-start justify-between gap-3 rounded-md bg-surface px-3 py-2.5 text-sm"
+            >
+              <span className="text-fg">{n.text}</span>
+              <span className="shrink-0 font-mono text-[11px] uppercase tracking-wider text-accent">
+                p.{n.page}
+              </span>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <div className="space-y-3">
+          <button
+            type="button"
+            onClick={() => setFlipped((f) => !f)}
+            className="w-full rounded-md bg-surface px-4 py-6 text-left shadow-[var(--shadow-border)]"
+          >
+            <p className="font-mono text-[11px] uppercase tracking-wider text-subtle">
+              {flipped ? "Answer" : "Prompt"} · p.{card.page}
+            </p>
+            <p className="mt-2 text-sm text-fg">{flipped ? card.back : card.front}</p>
+          </button>
+          <div className="flex justify-between gap-2">
+            <Button
+              type="button"
+              size="compact"
+              variant="ghost"
+              disabled={cardI === 0}
+              onClick={() => {
+                setCardI((i) => i - 1);
+                setFlipped(false);
+              }}
+            >
+              Previous
+            </Button>
+            <Button
+              type="button"
+              size="compact"
+              disabled={cardI >= lectureCards.length - 1}
+              onClick={() => {
+                setCardI((i) => i + 1);
+                setFlipped(false);
+              }}
+            >
+              Next
+              <ArrowRight className="size-3.5" />
+            </Button>
+          </div>
         </div>
-      ) : null}
+      )}
+      <p className="mt-5 font-mono text-[11px] uppercase tracking-wider text-subtle">
+        Live product · citedeck.wedgewerks.win/demo
+      </p>
     </DemoShell>
   );
 }
@@ -262,6 +339,9 @@ export function VecClipDemo() {
           </button>
         </div>
       ) : null}
+      <p className="mt-5 font-mono text-[11px] uppercase tracking-wider text-subtle">
+        Live product · vecclip.wedgewerks.win/demo
+      </p>
     </DemoShell>
   );
 }
