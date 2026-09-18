@@ -118,6 +118,15 @@ export function SiteFooter() {
             Parent studio of {studio.crew}, the TrustMRR factory. Focused tools,
             one wedge at a time.
           </p>
+          <p className="mt-3 text-sm text-muted">
+            Contact:{" "}
+            <a
+              href="mailto:info@wedgewerks.win"
+              className="text-accent underline-offset-2 hover:underline"
+            >
+              info@wedgewerks.win
+            </a>
+          </p>
         </div>
         <div>
           <SectionLabel>Studio</SectionLabel>

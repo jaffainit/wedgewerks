@@ -71,9 +71,9 @@ function TermsPage() {
               write to{" "}
               <a
                 className="text-accent underline-offset-2 hover:underline"
-                href="mailto:support@wedgewerks.win"
+                href="mailto:info@wedgewerks.win"
               >
-                support@wedgewerks.win
+                info@wedgewerks.win
               </a>
               .
             </p>
@@ -110,16 +110,16 @@ function TermsPage() {
               Questions:{" "}
               <a
                 className="text-accent underline-offset-2 hover:underline"
-                href="mailto:studio@wedgewerks.win"
+                href="mailto:info@wedgewerks.win"
               >
-                studio@wedgewerks.win
+                info@wedgewerks.win
               </a>{" "}
               or{" "}
               <a
                 className="text-accent underline-offset-2 hover:underline"
-                href="mailto:support@wedgewerks.win"
+                href="mailto:admin@wedgewerks.win"
               >
-                support@wedgewerks.win
+                admin@wedgewerks.win
               </a>
               . Privacy details live in our{" "}
               <Link
