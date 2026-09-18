@@ -41,7 +41,7 @@ export const products: Product[] = [
     slug: "userprobe",
     index: "01",
     name: "UserProbe",
-    status: "next",
+    status: "live",
     price: "$29/mo",
     wedge: "Solo builders who need research without a research team.",
     job: "Run a five-question async probe and get a job-to-be-done synthesis with pull-quotes in hours, not a quarter.",
@@ -63,6 +63,7 @@ export const products: Product[] = [
     ],
     metric: "A founder can send a probe Friday and read a synthesis Monday.",
     demoLabel: "Probe",
+    url: "https://userprobe.wedgewerks.win",
   },
   {
     slug: "citedeck",
@@ -213,13 +214,13 @@ export const crew = [
   },
 ] as const;
 
-/** Dated sample — not a live ticker. CiteDeck / VecClip / DocBrief live; UserProbe next. */
+/** Dated sample — not a live ticker. All four products live. */
 export const logLines = [
   { time: "07:00", who: "RADAR", text: "scan complete — 14 AI listings, 2 overlap" },
-  { time: "07:20", who: "DISPATCH", text: "ranked top 3 · default winner UserProbe" },
-  { time: "07:31", who: "HUMAN", text: "hold #1 · CiteDeck · VecClip · DocBrief already live" },
-  { time: "09:00", who: "FORGE", text: "idle — next seat is UserProbe" },
-  { time: "17:00", who: "ANCHOR", text: "catalog: three live · UserProbe next · no second build stacked" },
+  { time: "07:20", who: "DISPATCH", text: "ranked top 3 · default winner next wedge" },
+  { time: "07:31", who: "HUMAN", text: "hold · UserProbe · CiteDeck · VecClip · DocBrief all live" },
+  { time: "09:00", who: "FORGE", text: "idle — awaiting next approved wedge" },
+  { time: "17:00", who: "ANCHOR", text: "catalog: four live · no second build stacked" },
 ] as const;
 
 export const willNot = [
