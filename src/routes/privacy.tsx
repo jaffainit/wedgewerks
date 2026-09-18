@@ -42,16 +42,16 @@ function PrivacyPage() {
               and our apps: the WedgeWerks studio operators. Contact:{" "}
               <a
                 className="text-accent underline-offset-2 hover:underline"
-                href="mailto:support@wedgewerks.win"
+                href="mailto:info@wedgewerks.win"
               >
-                support@wedgewerks.win
+                info@wedgewerks.win
               </a>{" "}
               or{" "}
               <a
                 className="text-accent underline-offset-2 hover:underline"
-                href="mailto:studio@wedgewerks.win"
+                href="mailto:admin@wedgewerks.win"
               >
-                studio@wedgewerks.win
+                admin@wedgewerks.win
               </a>
               .
             </p>
@@ -127,9 +127,9 @@ function PrivacyPage() {
               processing. Contact{" "}
               <a
                 className="text-accent underline-offset-2 hover:underline"
-                href="mailto:support@wedgewerks.win"
+                href="mailto:admin@wedgewerks.win"
               >
-                support@wedgewerks.win
+                admin@wedgewerks.win
               </a>
               . You may also complain to the UK ICO or your local EU supervisory
               authority.
