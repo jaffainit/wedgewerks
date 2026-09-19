@@ -61,7 +61,7 @@ function ProductPage() {
           <Container className="max-w-4xl">
             <h2 className="font-display text-title tracking-tight">The job</h2>
             <ul className="mt-5 space-y-3">
-              {product.theJob.map((item) => (
+              {product.theJob.map((item: string) => (
                 <li key={item} className="flex gap-3 text-sm leading-relaxed text-fg">
                   <span className="mt-2 size-1.5 shrink-0 rounded-full bg-accent" />
                   {item}
