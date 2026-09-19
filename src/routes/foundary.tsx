@@ -8,11 +8,11 @@ import { crew, studio } from "@/lib/studio";
 export const Route = createFileRoute("/foundary")({
   head: () => ({
     meta: [
-      { title: "Foundary — WedgeWerks™" },
+      { title: "Foundary — TrustMRR factory crew | WedgeWerks" },
       {
         name: "description",
         content:
-          "Meet Foundary — the TrustMRR factory crew inside WedgeWerks: Anchor, Radar, Dispatch, and Forge.",
+          "Anchor, Radar, Dispatch, Forge, Herald. Factory finds and ships. Herald makes the catalog findable.",
       },
     ],
   }),
@@ -29,9 +29,9 @@ function FoundaryPage() {
             The TrustMRR factory crew inside {studio.mark}.
           </h1>
           <p className="mt-5 text-lede leading-relaxed text-muted">
-            Four seats. One direction. Radar finds today's AI movers.
+            Five seats. One direction. Radar finds today's AI movers.
             Dispatch ranks three and writes a build order. You approve.
-            Forge builds that MVP only. Anchor keeps the line honest.
+            Forge builds that MVP only. Herald makes it findable. Anchor keeps the line honest.
           </p>
           <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.16em] text-subtle">
             Spelling note: Foundary is intentional — not “Foundry”.

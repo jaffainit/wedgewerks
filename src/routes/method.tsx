@@ -7,11 +7,11 @@ import { pipeline } from "@/lib/studio";
 export const Route = createFileRoute("/method")({
   head: () => ({
     meta: [
-      { title: "Method — WedgeWerks™" },
+      { title: "Method — TrustMRR in. One paid MVP out." },
       {
         name: "description",
         content:
-          "How WedgeWerks ships: Radar finds TrustMRR wedges, Dispatch ranks, you approve, Forge builds one paid MVP.",
+          "Radar scans TrustMRR. Dispatch ranks three. You approve. Forge builds that MVP only. Human wall on spend and ship.",
       },
     ],
   }),

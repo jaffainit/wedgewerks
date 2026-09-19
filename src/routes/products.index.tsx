@@ -6,11 +6,11 @@ import { products, studio } from "@/lib/studio";
 export const Route = createFileRoute("/products/")({
   head: () => ({
     meta: [
-      { title: "Catalog — WedgeWerks™" },
+      { title: "Five one-job tools — WedgeWerks catalog" },
       {
         name: "description",
         content:
-          "WedgeWerks catalog: UserProbe, CiteDeck, VecClip, DocBrief, and PromptKit are live. Focused tools, one job each.",
+          "UserProbe, CiteDeck, VecClip, DocBrief, PromptKit. Each a clear job-to-be-done. Simple subscription. Parent studio of Foundary.",
       },
     ],
   }),
@@ -33,6 +33,7 @@ function ProductsIndex() {
       </section>
       <section className="py-16 sm:py-20">
         <Container>
+          <h2 className="mb-8 font-display text-title tracking-tight">Live catalog</h2>
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {products.map((p) => (
               <ProductCard key={p.slug} product={p} />
