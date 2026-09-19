@@ -10,12 +10,12 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "WedgeWerks™ — Find the wedge. Ship the MVP.",
+        title: "WedgeWerks — Find the wedge. Ship the MVP.",
       },
       {
         name: "description",
         content:
-          "WedgeWerks is a small product factory. We find fast-growing AI wedges, pick one, and ship a paid MVP in days — landing, auth, core job, Stripe.",
+          "Small product factory. We find AI wedges on TrustMRR, pick one, and ship a paid MVP in days. Five live one-job tools. Not a platform.",
       },
     ],
   }),

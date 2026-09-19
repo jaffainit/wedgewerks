@@ -18,6 +18,18 @@ export type Product = {
   demoLabel: string;
   /** Public product URL when live */
   url?: string;
+  /** Short deck for product page hero */
+  deck?: string;
+  /** The job bullets for product page */
+  theJob?: string[];
+  /** Who it's for detail */
+  whoItsFor?: string;
+  /** What it is not detail */
+  whatItIsNot?: string;
+  /** SEO meta description for product page */
+  metaDescription?: string;
+  /** SEO title for product page */
+  metaTitle?: string;
 };
 
 export const studio = {
@@ -64,6 +76,16 @@ export const products: Product[] = [
     metric: "A founder can send a probe Friday and read a synthesis Monday.",
     demoLabel: "Probe",
     url: "https://userprobe.wedgewerks.win",
+    deck: "Solo builders who need research without a research team.",
+    theJob: [
+      "Turns a product question into usable research",
+      "Built for one founder, not a research org",
+      "Not a full insights platform or survey suite",
+    ],
+    whoItsFor: "Solo builders who need research without a research team.",
+    whatItIsNot: "Not an agency. Not a panel marketplace. Not \"unlock growth.\"",
+    metaTitle: "UserProbe — Research without a research team | WedgeWerks",
+    metaDescription: "For solo builders who need research without a research team. $29/mo. One job. Simple subscription. Built by WedgeWerks.",
   },
   {
     slug: "citedeck",
@@ -92,6 +114,16 @@ export const products: Product[] = [
     metric: "Cited notes from your own deck in one upload.",
     demoLabel: "Notes",
     url: "https://citedeck.wedgewerks.win",
+    deck: "Uni students and bootcamp learners who need study notes with page citations.",
+    theJob: [
+      "Study notes that keep the page citation",
+      "Built for coursework and bootcamp pace",
+      "Not a generic chatbot notes dump",
+    ],
+    whoItsFor: "Uni students and bootcamp learners who need study notes with page citations.",
+    whatItIsNot: "Not a tutoring marketplace. Not an essay mill. Not a \"learning platform.\"",
+    metaTitle: "CiteDeck — Study notes with page citations | WedgeWerks",
+    metaDescription: "For uni students and bootcamp learners who need study notes with page citations. $12/mo. One job. Built by WedgeWerks.",
   },
   {
     slug: "vecclip",
@@ -120,6 +152,16 @@ export const products: Product[] = [
     metric: "A looping SVG from a short clip in one export.",
     demoLabel: "SVG",
     url: "https://vecclip.wedgewerks.win",
+    deck: "Indie web designers who want looping SVG from short MP4s.",
+    theJob: [
+      "Short MP4 in → looping SVG out",
+      "Built for indie web designers, not a film studio",
+      "Not a full motion-graphics suite",
+    ],
+    whoItsFor: "Indie web designers who want looping SVG from short MP4s.",
+    whatItIsNot: "Not After Effects. Not a stock marketplace. Not \"AI video platform.\"",
+    metaTitle: "VecClip — Looping SVG from short MP4s | WedgeWerks",
+    metaDescription: "For indie web designers who want looping SVG from short MP4s. $19/mo. One job. Built by WedgeWerks.",
   },
   {
     slug: "docbrief",
@@ -149,6 +191,16 @@ export const products: Product[] = [
     metric: "A short captioned MP4 from a brief in one generate.",
     demoLabel: "MP4",
     url: "https://docbrief.wedgewerks.win",
+    deck: "Faceless and solo creators who need a short YouTube documentary without an editor or GPU film studio.",
+    theJob: [
+      "Short documentary-style YouTube cut",
+      "Built for faceless and solo creators",
+      "No editor hire. No GPU film studio.",
+    ],
+    whoItsFor: "Faceless and solo creators who need a short YouTube documentary without an editor or GPU film studio.",
+    whatItIsNot: "Not a full NLE. Not a studio. Not a ChatGPT wrapper with no job.",
+    metaTitle: "DocBrief — Short YouTube docs without an editor | WedgeWerks",
+    metaDescription: "For faceless and solo creators who need a short YouTube documentary without an editor or GPU film studio. Starter $12 / Creator $36. Built by WedgeWerks.",
   },
   {
     slug: "promptkit",
@@ -177,6 +229,16 @@ export const products: Product[] = [
     metric: "A paid checkout or 20 synced snippets across 5 users in week one.",
     demoLabel: "Snippets",
     url: "https://promptkit.wedgewerks.win",
+    deck: "Claude.ai power users who lose prompts across chats.",
+    theJob: [
+      "Keep prompts across Claude.ai chats",
+      "Built for power users who reuse what works",
+      "Not a prompt marketplace. Not an agent runtime.",
+    ],
+    whoItsFor: "Claude.ai power users who lose prompts across chats.",
+    whatItIsNot: "Not Microsoft PromptKit. Not a Go agent runtime. Not \"prompt engineering platform.\"",
+    metaTitle: "PromptKit — Save Claude.ai prompts across chats | WedgeWerks",
+    metaDescription: "For Claude.ai power users who lose prompts across chats. $4/mo. One job. WedgeWerks PromptKit — not the other PromptKits.",
   },
 ];
 
@@ -239,6 +301,13 @@ export const crew = [
     hands: "Landing, auth, core job, Stripe — the code.",
     not: "Does not pick a different idea mid-build or rescan TrustMRR.",
     body: "One approved product at a time. Smallest paid loop. Asks at most three questions, then builds the smaller interpretation.",
+  },
+  {
+    name: "Herald",
+    title: "Distribution",
+    hands: "Getting WedgeWerks.win and the live catalog in front of humans who will pay.",
+    not: "Does not invent wedges, change prices, or start a second product.",
+    body: "Owns getting WedgeWerks.win and the live catalog in front of humans who will pay. Drafts SEO, launches, threads, outreach. Humans send and post.",
   },
 ] as const;
 
