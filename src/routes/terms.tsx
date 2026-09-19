@@ -39,7 +39,7 @@ function TermsPage() {
             <h2 className="font-display text-title text-fg">The service</h2>
             <p className="mt-3">
               {studio.mark} publishes focused software tools (including
-              UserProbe, CiteDeck, VecClip, and DocBrief). Features, prices, and
+              UserProbe, CiteDeck, VecClip, DocBrief, and PromptKit). Features, prices, and
               availability can change. Pre-release or “next” seats are not a
               guarantee of a ship date.
             </p>
