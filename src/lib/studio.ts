@@ -150,6 +150,34 @@ export const products: Product[] = [
     demoLabel: "MP4",
     url: "https://docbrief.wedgewerks.win",
   },
+  {
+    slug: "promptkit",
+    index: "05",
+    name: "PromptKit",
+    status: "live",
+    price: "$4/mo",
+    wedge: "Claude.ai power users who lose prompts across chats.",
+    job: "Save reusable prompt snippets from Claude.ai, sync them to your account, and one-click insert them back into the composer.",
+    forWhom: "Solo builders and PMs who live in Claude.ai daily.",
+    charge: "Free (10 snippets). Pro $4/mo unlimited. Lifetime $28.",
+    image: "/brand/promptkit.jpg",
+    imageAlt: "Dark PromptKit extension popup with synced prompt snippet cards.",
+    must: [
+      "Chrome MV3 extension on claude.ai",
+      "Save / insert / tags / markdown export",
+      "Synced snippet library with auth",
+      "Stripe Checkout Free → Pro $4/mo (+ Lifetime $28)",
+    ],
+    mustNot: [
+      "Pixel-clone of ClaudeKit branding",
+      "Full Claude thread fork graph",
+      "Multi-LLM beyond Claude.ai",
+      "Team workspaces / SSO",
+    ],
+    metric: "A paid checkout or 20 synced snippets across 5 users in week one.",
+    demoLabel: "Snippets",
+    url: "https://promptkit.wedgewerks.win",
+  },
 ];
 
 export const pipeline = [
@@ -214,13 +242,13 @@ export const crew = [
   },
 ] as const;
 
-/** Dated sample — not a live ticker. All four products live. */
+/** Dated sample — not a live ticker. All five products live. */
 export const logLines = [
   { time: "07:00", who: "RADAR", text: "scan complete — 14 AI listings, 2 overlap" },
   { time: "07:20", who: "DISPATCH", text: "ranked top 3 · default winner next wedge" },
-  { time: "07:31", who: "HUMAN", text: "hold · UserProbe · CiteDeck · VecClip · DocBrief all live" },
+  { time: "07:31", who: "HUMAN", text: "hold · UserProbe · CiteDeck · VecClip · DocBrief · PromptKit all live" },
   { time: "09:00", who: "FORGE", text: "idle — awaiting next approved wedge" },
-  { time: "17:00", who: "ANCHOR", text: "catalog: four live · no second build stacked" },
+  { time: "17:00", who: "ANCHOR", text: "catalog: five live · no second build stacked" },
 ] as const;
 
 export const willNot = [

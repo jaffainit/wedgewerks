@@ -10,7 +10,7 @@ export const Route = createFileRoute("/products/")({
       {
         name: "description",
         content:
-          "WedgeWerks catalog: UserProbe, CiteDeck, VecClip, and DocBrief are live. Focused tools, one job each.",
+          "WedgeWerks catalog: UserProbe, CiteDeck, VecClip, DocBrief, and PromptKit are live. Focused tools, one job each.",
       },
     ],
   }),
@@ -24,10 +24,10 @@ function ProductsIndex() {
         <Container>
           <SectionLabel>Catalog</SectionLabel>
           <h1 className="mt-4 max-w-3xl font-display text-headline tracking-tight">
-            Four tools. Each one job. Sold as a subscription.
+            Five tools. Each one job. Sold as a subscription.
           </h1>
           <p className="mt-5 max-w-2xl text-lede leading-relaxed text-muted">
-            {studio.manifesto} UserProbe, CiteDeck, VecClip, and DocBrief are live.
+            {studio.manifesto} UserProbe, CiteDeck, VecClip, DocBrief, and PromptKit are live.
           </p>
         </Container>
       </section>
