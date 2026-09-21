@@ -24,6 +24,7 @@ export function StatusChip({ status }: { status: ProductStatus }) {
 }
 
 export function ProductCard({ product }: { product: Product }) {
+  // Renders product price for all products on catalog page
   return (
     <div className="group flex flex-col rounded-xl bg-surface p-2 shadow-[var(--shadow-border)]">
       <Link
