@@ -46,8 +46,8 @@ export function ProductCard({ product }: { product: Product }) {
         <h3 className="mt-3 font-display text-title tracking-tight">{product.name}</h3>
         <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{product.wedge}</p>
         <div className="mt-5 flex items-center justify-between gap-2 text-sm">
-          <span className="tabular-nums text-fg">{product.price}</span>
-          <div className="flex items-center gap-2">
+          <span className="tabular-nums text-fg shrink-0 min-w-[4rem]">{product.price}</span>
+          <div className="flex items-center gap-2 shrink">
             <Link
               to="/products/$slug"
               params={{ slug: product.slug }}
