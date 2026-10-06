@@ -6,6 +6,7 @@ import {
 } from "@tanstack/react-router";
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
+import { Analytics } from "@/components/analytics";
 import { NotFoundPage, SiteFooter, SiteHeader } from "@/components/site-chrome";
 import appCss from "../styles.css?url";
 
@@ -46,6 +47,7 @@ function RootShell() {
       </head>
       <body className="flex min-h-dvh flex-col bg-bg text-fg">
         <PreviewHostBridge />
+        <Analytics />
         <div className="grain" aria-hidden="true" />
         <AuthProvider>
           <a

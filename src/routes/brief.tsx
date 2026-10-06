@@ -55,6 +55,7 @@ export const Route = createFileRoute("/brief")({
           "File a WedgeWerks brief: request access, suggest a wedge, or press. Short jobs only.",
       },
     ],
+    links: ([{ rel: "canonical", href: "https://www.wedgewerks.win/brief" }]),
   }),
   component: BriefPage,
 });

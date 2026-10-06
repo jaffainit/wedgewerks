@@ -13,6 +13,7 @@ export const Route = createFileRoute("/products/")({
           "UserProbe, CiteDeck, VecClip, DocBrief, PromptKit. Each a clear job-to-be-done. Simple subscription. Parent studio of Foundary.",
       },
     ],
+    links: ([{ rel: "canonical", href: "https://www.wedgewerks.win/products" }]),
   }),
   component: ProductsIndex,
 });

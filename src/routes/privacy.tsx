@@ -12,6 +12,7 @@ export const Route = createFileRoute("/privacy")({
           "Plain-language privacy notice for WedgeWerks™: what we collect, why, how long we keep it, and how to reach us.",
       },
     ],
+    links: ([{ rel: "canonical", href: "https://www.wedgewerks.win/privacy" }]),
   }),
   component: PrivacyPage,
 });

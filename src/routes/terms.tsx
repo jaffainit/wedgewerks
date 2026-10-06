@@ -12,6 +12,7 @@ export const Route = createFileRoute("/terms")({
           "Terms of use for WedgeWerks™ studio site and catalog products — plain language for UK and EU visitors.",
       },
     ],
+    links: ([{ rel: "canonical", href: "https://www.wedgewerks.win/terms" }]),
   }),
   component: TermsPage,
 });

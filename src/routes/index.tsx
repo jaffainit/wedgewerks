@@ -18,6 +18,7 @@ export const Route = createFileRoute("/")({
           "Small product factory. We find AI wedges on TrustMRR, pick one, and ship a paid MVP in days. Five live one-job tools. Not a platform.",
       },
     ],
+    links: ([{ rel: "canonical", href: "https://www.wedgewerks.win/" }]),
   }),
   component: Home,
 });

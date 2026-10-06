@@ -20,6 +20,7 @@ export const Route = createFileRoute("/products/$slug")({
         content: loaderData?.product.metaDescription || `${loaderData?.product.name}: ${loaderData?.product.job} ${loaderData?.product.price}.`,
       },
     ],
+    links: ([{ rel: "canonical", href: `https://www.wedgewerks.win/products/${loaderData?.product.slug ?? ""}` }]),
   }),
   component: ProductPage,
 });
@@ -43,6 +44,14 @@ function ProductPage() {
               <span className="font-display text-title tabular-nums text-fg">
                 {product.price}
               </span>
+              {product.paymentUrl && (
+                <Button asChild>
+                  <a href={product.paymentUrl} target="_blank" rel="noreferrer">
+                    Subscribe — {product.name} Pro
+                    <ArrowUpRight className="size-4" />
+                  </a>
+                </Button>
+              )}
               {product.url && (
                 <Button asChild>
                   <a href={product.url} target="_blank" rel="noreferrer">

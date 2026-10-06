@@ -30,6 +30,8 @@ export type Product = {
   metaDescription?: string;
   /** SEO title for product page */
   metaTitle?: string;
+  /** Stripe Payment Link (or checkout URL) when the product takes payment */
+  paymentUrl?: string;
 };
 
 export const studio = {
@@ -93,6 +95,7 @@ export const products: Product[] = [
     name: "CiteDeck",
     status: "live",
     price: "$12/mo",
+    paymentUrl: import.meta.env.VITE_CITEDECK_CHECKOUT_URL || undefined,
     wedge: "Uni students and bootcamp learners who need study notes with page citations.",
     job: "Upload lecture PDFs or PPTX. Get structured notes, flashcards, and a quiz where every claim cites a page or slide.",
     forWhom: "Students and bootcamp learners using their own materials.",

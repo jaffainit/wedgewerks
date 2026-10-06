@@ -14,6 +14,7 @@ export const Route = createFileRoute("/method")({
           "Radar scans TrustMRR. Dispatch ranks three. You approve. Forge builds that MVP only. Human wall on spend and ship.",
       },
     ],
+    links: ([{ rel: "canonical", href: "https://www.wedgewerks.win/method" }]),
   }),
   component: MethodPage,
 });

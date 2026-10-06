@@ -15,6 +15,7 @@ export const Route = createFileRoute("/foundary")({
           "Anchor, Radar, Dispatch, Forge, Herald. Factory finds and ships. Herald makes the catalog findable.",
       },
     ],
+    links: ([{ rel: "canonical", href: "https://www.wedgewerks.win/foundary" }]),
   }),
   component: FoundaryPage,
 });
