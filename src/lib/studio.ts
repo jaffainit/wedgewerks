@@ -323,6 +323,46 @@ export const products: Product[] = [
     metaDescription:
       "A UI reference library your coding agent can query. 25 original references with build specs, served over MCP to Cursor, Claude Code and Codex. Free 5 refs/day. Pro $9/mo. Built by WedgeWerks.",
   },
+  {
+    slug: "linkpitch",
+    index: "08",
+    name: "LinkPitch",
+    status: "live",
+    price: "$29/mo",
+    wedge:
+      "A thin version of ElvixAI — backlink prospects and AI pitch drafts for indie SaaS founders.",
+    job: "Enter your site and niche keywords. Get a ranked list of relevant backlink targets, each with a \"why it fits\" line, plus one-click personalised outreach drafts you edit, approve and export as CSV.",
+    forWhom: "Indie SaaS founders doing their own link building.",
+    charge: "Free (1 campaign, 10 prospects, 3 drafts). Pro $29/mo.",
+    image: "/brand/logos/linkpitch.png",
+    imageAlt: "Indigo LinkPitch logo: an off-white chain link and paper plane with a coral sparkle.",
+    must: [
+      "Ranked backlink prospects from your site and niche keywords",
+      "A \"why it fits\" line for every prospect",
+      "One-click personalised outreach draft per prospect — edit, approve, export as CSV",
+      "Stripe Checkout Free → Pro $29/mo",
+    ],
+    mustNot: [
+      "Pixel-clone of ElvixAI branding",
+      "Sending email from your inbox",
+      "A full SEO suite or rank tracker",
+      "Team workspaces / SSO",
+    ],
+    metric: "1 paid subscriber by day 14.",
+    demoLabel: "Pitches",
+    url: "https://linkpitch.wedgewerks.win",
+    deck: "Backlink prospects and AI pitch drafts for indie SaaS founders. Enter your site and niche keywords, get a ranked list of relevant targets, and draft a personalised email for each. You send it yourself.",
+    theJob: [
+      "Get ranked backlink prospects, each with a line on why it fits",
+      "Draft a personalised outreach email per prospect in one click",
+      "Edit, approve and export as CSV. You send it yourself; nothing goes out from your inbox.",
+    ],
+    whoItsFor: "Indie SaaS founders who want backlinks without hiring a link-building agency.",
+    whatItIsNot: "Not ElvixAI. Not an email sender. Not a full SEO suite.",
+    metaTitle: "LinkPitch — Backlink prospects and AI pitch drafts for indie SaaS | WedgeWerks",
+    metaDescription:
+      "Backlink prospects and AI pitch drafts for indie SaaS founders. Ranked targets with a why-it-fits line, personalised outreach drafts, CSV export. Free tier. Pro $29/mo. Built by WedgeWerks.",
+  },
 ];
 
 export const pipeline = [
@@ -394,13 +434,13 @@ export const crew = [
   },
 ] as const;
 
-/** Dated sample — not a live ticker. All seven products live. */
+/** Dated sample — not a live ticker. All eight products live. */
 export const logLines = [
   { time: "07:00", who: "RADAR", text: "scan complete — 14 AI listings, 2 overlap" },
   { time: "07:20", who: "DISPATCH", text: "ranked top 3 · default winner next wedge" },
-  { time: "07:31", who: "HUMAN", text: "hold · UserProbe · CiteDeck · VecClip · DocBrief · PromptKit · SkillPack · TasteKit all live" },
+  { time: "07:31", who: "HUMAN", text: "hold · UserProbe · CiteDeck · VecClip · DocBrief · PromptKit · SkillPack · TasteKit · LinkPitch all live" },
   { time: "09:00", who: "FORGE", text: "idle — awaiting next approved wedge" },
-  { time: "17:00", who: "ANCHOR", text: "catalog: seven live · no second build stacked" },
+  { time: "17:00", who: "ANCHOR", text: "catalog: eight live · no second build stacked" },
 ] as const;
 
 export const willNot = [
