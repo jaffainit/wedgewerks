@@ -6,11 +6,11 @@ import { products, studio } from "@/lib/studio";
 export const Route = createFileRoute("/products/")({
   head: () => ({
     meta: [
-      { title: "Six one-job tools — WedgeWerks catalog" },
+      { title: "Seven one-job tools — WedgeWerks catalog" },
       {
         name: "description",
         content:
-          "UserProbe, CiteDeck, VecClip, DocBrief, PromptKit, SkillPack. Each a clear job-to-be-done. Simple subscription. Parent studio of Foundary.",
+          "UserProbe, CiteDeck, VecClip, DocBrief, PromptKit, SkillPack, TasteKit. Each a clear job-to-be-done. Simple subscription. Parent studio of Foundary.",
       },
     ],
     links: ([{ rel: "canonical", href: "https://www.wedgewerks.win/products" }]),
@@ -25,17 +25,17 @@ function ProductsIndex() {
         <Container>
           <SectionLabel>Catalog</SectionLabel>
           <h1 className="mt-4 max-w-3xl font-display text-headline tracking-tight">
-            Six tools. Each one job. Sold as a subscription.
+            Seven tools. Each one job. Sold as a subscription.
           </h1>
           <p className="mt-5 max-w-2xl text-lede leading-relaxed text-muted">
-            {studio.manifesto} UserProbe, CiteDeck, VecClip, DocBrief, PromptKit, and SkillPack are live.
+            {studio.manifesto} UserProbe, CiteDeck, VecClip, DocBrief, PromptKit, SkillPack, and TasteKit are live.
           </p>
         </Container>
       </section>
       <section className="py-16 sm:py-20">
         <Container>
           <h2 className="mb-8 font-display text-title tracking-tight">Live catalog</h2>
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
             {products.map((p) => (
               <ProductCard key={p.slug} product={p} />
             ))}

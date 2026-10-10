@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Small product factory. We find AI wedges on TrustMRR, pick one, and ship a paid MVP in days. Six live one-job tools. Not a platform.",
+          "Small product factory. We find AI wedges on TrustMRR, pick one, and ship a paid MVP in days. Seven live one-job tools. Not a platform.",
       },
     ],
     links: ([{ rel: "canonical", href: "https://www.wedgewerks.win/" }]),
@@ -108,7 +108,7 @@ function Home() {
               <ArrowRight className="size-4" />
             </Link>
           </div>
-          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
             {products.map((p) => (
               <ProductCard key={p.slug} product={p} />
             ))}
