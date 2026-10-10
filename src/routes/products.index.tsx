@@ -35,7 +35,7 @@ function ProductsIndex() {
       <section className="py-16 sm:py-20">
         <Container>
           <h2 className="mb-8 font-display text-title tracking-tight">Live catalog</h2>
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
             {products.map((p) => (
               <ProductCard key={p.slug} product={p} />
             ))}

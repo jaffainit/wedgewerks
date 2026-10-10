@@ -30,7 +30,7 @@ export function ProductCard({ product }: { product: Product }) {
       <Link
         to="/products/$slug"
         params={{ slug: product.slug }}
-        className="flex aspect-square items-center justify-center overflow-hidden rounded-lg bg-elevated p-5 sm:p-6"
+        className="flex aspect-square items-center justify-center overflow-hidden rounded-lg bg-elevated p-3 sm:p-5 lg:p-6"
       >
         <img
           src={product.image}
@@ -46,10 +46,12 @@ export function ProductCard({ product }: { product: Product }) {
           <StatusChip status={product.status} />
         </div>
         <h3 className="mt-3 font-display text-title tracking-tight">{product.name}</h3>
-        <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{product.wedge}</p>
-        <div className="mt-5 flex items-center justify-between gap-2 text-sm">
-          <span className="tabular-nums text-fg shrink-0 min-w-[4rem]">{product.price}</span>
-          <div className="flex items-center gap-2 shrink">
+        <p className="mt-2 hidden flex-1 text-sm leading-relaxed text-muted sm:block">
+          {product.wedge}
+        </p>
+        <div className="mt-4 flex flex-col gap-2 text-sm sm:mt-5 sm:flex-row sm:items-center sm:justify-between">
+          <span className="tabular-nums text-fg">{product.price}</span>
+          <div className="flex items-center gap-2">
             <Link
               to="/products/$slug"
               params={{ slug: product.slug }}
