@@ -29,7 +29,7 @@ function PrivacyPage() {
           <p className="mt-5 text-lede leading-relaxed text-muted">
             This notice explains how {studio.mark} handles personal data for our
             studio site and catalog products (UserProbe, CiteDeck, VecClip,
-            DocBrief). Written for people in the UK and EU. Last updated 12
+            DocBrief, PromptKit, and SkillPack). Written for people in the UK and EU. Last updated 12
             September 2026.
           </p>
         </Container>
@@ -72,8 +72,9 @@ function PrivacyPage() {
               <li>
                 <span className="text-fg">Product content you upload</span> —
                 lecture PDFs / PPTX (CiteDeck), short MP4s (VecClip), briefs /
-                scripts and generated VO assets (DocBrief), and probe answers
-                (UserProbe) needed to do the job you paid for.
+                scripts and generated VO assets (DocBrief), probe answers
+                (UserProbe), prompt snippets (PromptKit), and installed skill
+                packs (SkillPack) needed to do the job you paid for.
               </li>
               <li>
                 <span className="text-fg">Brief inbox messages</span> — name,
