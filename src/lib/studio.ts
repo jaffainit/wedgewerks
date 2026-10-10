@@ -243,6 +243,46 @@ export const products: Product[] = [
     metaTitle: "PromptKit — Save Claude.ai prompts across chats | WedgeWerks",
     metaDescription: "For Claude.ai power users who lose prompts across chats. $4/mo. One job. WedgeWerks PromptKit — not the other PromptKits.",
   },
+  {
+    slug: "skillpack",
+    index: "06",
+    name: "SkillPack",
+    status: "live",
+    price: "$9/mo",
+    wedge:
+      "TrustMRR mover Skillry (Agent Skills library) — curated, installable skills for Cursor, Claude Code, and Codex.",
+    job: "Curated, installable agent skills for Cursor, Claude Code and Codex. Browse free, Pro unlocks the full library.",
+    forWhom: "Indie AI builders on Cursor / Claude Code.",
+    charge: "Free browse. Pro $9/mo. Lifetime $49.",
+    image: "/brand/skillpack.jpg",
+    imageAlt: "Dark SkillPack window with a brass-accented skill card.",
+    must: [
+      "Browse curated agent skills for Cursor, Claude Code, and Codex",
+      "One-click install into the agent's skill folder",
+      "Free browse; Pro unlocks the full library",
+      "Stripe Checkout Free → Pro $9/mo (+ Lifetime $49)",
+    ],
+    mustNot: [
+      "Pixel-clone of Skillry branding",
+      "A user-generated skill marketplace",
+      "An agent runtime or IDE",
+      "Team workspaces / SSO",
+    ],
+    metric: "A paid checkout or 20 installs across 5 users in week one.",
+    demoLabel: "Skills",
+    url: "https://skillpack.wedgewerks.win",
+    deck: "Curated, installable agent skills for Cursor, Claude Code and Codex. Browse free, Pro unlocks the full library.",
+    theJob: [
+      "Install curated agent skills in one click",
+      "Built for indie AI builders on Cursor and Claude Code",
+      "Not a skill marketplace. Not an agent runtime.",
+    ],
+    whoItsFor: "Indie AI builders on Cursor / Claude Code.",
+    whatItIsNot: "Not Skillry. Not an IDE. Not an agent runtime.",
+    metaTitle: "SkillPack — Installable agent skills for Cursor and Claude Code | WedgeWerks",
+    metaDescription:
+      "Curated, installable agent skills for Cursor, Claude Code and Codex. Browse free. Pro $9/mo. Built by WedgeWerks.",
+  },
 ];
 
 export const pipeline = [
@@ -314,13 +354,13 @@ export const crew = [
   },
 ] as const;
 
-/** Dated sample — not a live ticker. All five products live. */
+/** Dated sample — not a live ticker. All six products live. */
 export const logLines = [
   { time: "07:00", who: "RADAR", text: "scan complete — 14 AI listings, 2 overlap" },
   { time: "07:20", who: "DISPATCH", text: "ranked top 3 · default winner next wedge" },
-  { time: "07:31", who: "HUMAN", text: "hold · UserProbe · CiteDeck · VecClip · DocBrief · PromptKit all live" },
+  { time: "07:31", who: "HUMAN", text: "hold · UserProbe · CiteDeck · VecClip · DocBrief · PromptKit · SkillPack all live" },
   { time: "09:00", who: "FORGE", text: "idle — awaiting next approved wedge" },
-  { time: "17:00", who: "ANCHOR", text: "catalog: five live · no second build stacked" },
+  { time: "17:00", who: "ANCHOR", text: "catalog: six live · no second build stacked" },
 ] as const;
 
 export const willNot = [
