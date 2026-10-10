@@ -30,12 +30,14 @@ export function ProductCard({ product }: { product: Product }) {
       <Link
         to="/products/$slug"
         params={{ slug: product.slug }}
-        className="block overflow-hidden rounded-lg bg-elevated"
+        className="flex aspect-square items-center justify-center overflow-hidden rounded-lg bg-elevated p-5 sm:p-6"
       >
         <img
           src={product.image}
           alt={product.imageAlt}
-          className="photo aspect-[4/3] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+          width={512}
+          height={512}
+          className="h-full w-full object-contain transition-transform duration-500 ease-out group-hover:scale-[1.03]"
         />
       </Link>
       <div className="flex flex-1 flex-col px-3 pb-3 pt-5">

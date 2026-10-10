@@ -61,8 +61,8 @@ export const products: Product[] = [
     job: "Run a five-question async probe and get a job-to-be-done synthesis with pull-quotes in hours, not a quarter.",
     forWhom: "Founders and PMs shipping alone.",
     charge: "Simple monthly seat. No per-interview tax.",
-    image: "/brand/userprobe.jpg",
-    imageAlt: "Steel inspection probe and brass caliper on black felt.",
+    image: "/brand/logos/userprobe.png",
+    imageAlt: "Indigo UserProbe logo: an off-white magnifying glass around a person, with a coral dot.",
     must: [
       "Five-question probe templates",
       "Shareable async link for participants",
@@ -100,8 +100,8 @@ export const products: Product[] = [
     job: "Upload lecture PDFs or PPTX. Get structured notes, flashcards, and a quiz where every claim cites a page or slide.",
     forWhom: "Students and bootcamp learners using their own materials.",
     charge: "Pro $12/mo. Free tier included.",
-    image: "/brand/citedeck.jpg",
-    imageAlt: "Dark CiteDeck window: PDF to cited notes, flashcards, and quiz.",
+    image: "/brand/logos/citedeck.png",
+    imageAlt: "Indigo CiteDeck logo: a stack of off-white note cards with a coral quotation mark.",
     must: [
       "PDF and PPTX upload",
       "Cited note blocks with pageRef",
@@ -138,8 +138,8 @@ export const products: Product[] = [
     job: "Convert a short MP4 into a path-morphing animated SVG you can drop on a site.",
     forWhom: "Indie designers and front-end builders.",
     charge: "Pro $19/mo via Stripe Checkout.",
-    image: "/brand/vecclip.jpg",
-    imageAlt: "Dark VecClip window: MP4 to frames to morphing SVG.",
+    image: "/brand/logos/vecclip.png",
+    imageAlt: "Indigo VecClip logo: an off-white film strip with a coral path-morphing trail.",
     must: [
       "MP4 upload",
       "Frame→SVG vectorization with path morphing",
@@ -176,8 +176,8 @@ export const products: Product[] = [
     job: "Paste a topic or rough script. Get a polished voiceover script, TTS, B-roll stills, burned-in captions, and a downloadable MP4.",
     forWhom: "Faceless / solo YouTube creators.",
     charge: "Free (1 short render). Starter $12/mo. Creator $36/mo via Stripe Checkout.",
-    image: "/brand/docbrief.jpg",
-    imageAlt: "Dark documentary player frame with a caption bar and progress scrubber.",
+    image: "/brand/logos/docbrief.png",
+    imageAlt: "Indigo DocBrief logo: an off-white document with a coral play mark.",
     must: [
       "Brief → polished script",
       "TTS voiceover when keyed",
@@ -215,8 +215,8 @@ export const products: Product[] = [
     job: "Save reusable prompt snippets from Claude.ai, sync them to your account, and one-click insert them back into the composer.",
     forWhom: "Solo builders and PMs who live in Claude.ai daily.",
     charge: "Free (10 snippets). Pro $4/mo unlimited. Lifetime $28.",
-    image: "/brand/promptkit.jpg",
-    imageAlt: "Dark PromptKit extension popup with synced prompt snippet cards.",
+    image: "/brand/logos/promptkit.png",
+    imageAlt: "Indigo PromptKit logo: an off-white briefcase with a coral command prompt.",
     must: [
       "Chrome MV3 extension on claude.ai",
       "Save / insert / tags / markdown export",
@@ -254,8 +254,8 @@ export const products: Product[] = [
     job: "Curated, installable agent skills for Cursor, Claude Code and Codex. Browse free, Pro unlocks the full library.",
     forWhom: "Indie AI builders on Cursor / Claude Code.",
     charge: "Free browse. Pro $9/mo. Lifetime $49.",
-    image: "/brand/skillpack.jpg",
-    imageAlt: "Dark SkillPack window with a brass-accented skill card.",
+    image: "/brand/logos/skillpack.png",
+    imageAlt: "Indigo SkillPack logo: an off-white backpack with a coral lightning bolt.",
     must: [
       "Browse curated agent skills for Cursor, Claude Code, and Codex",
       "One-click install into the agent's skill folder",
@@ -282,6 +282,46 @@ export const products: Product[] = [
     metaTitle: "SkillPack — Installable agent skills for Cursor and Claude Code | WedgeWerks",
     metaDescription:
       "Curated, installable agent skills for Cursor, Claude Code and Codex. Browse free. Pro $9/mo. Built by WedgeWerks.",
+  },
+  {
+    slug: "tastekit",
+    index: "07",
+    name: "TasteKit",
+    status: "live",
+    price: "$9/mo",
+    wedge:
+      "TrustMRR mover Uizze (UI reference library) — a UI reference library your coding agent can query.",
+    job: "A UI reference library your coding agent can query. 25 original references with build specs, served over MCP to Cursor, Claude Code and Codex.",
+    forWhom: "Indie AI builders on Cursor / Claude Code / Codex.",
+    charge: "Free shows 5 refs/day. Pro $9/mo. Lifetime $49.",
+    image: "/brand/logos/tastekit.png",
+    imageAlt: "Indigo TasteKit logo: an off-white UI window with a coral sparkle.",
+    must: [
+      "25 original UI references with build specs",
+      "Queryable over MCP for Cursor, Claude Code, and Codex",
+      "Free tier shows 5 refs/day",
+      "Stripe Checkout Free → Pro $9/mo (+ Lifetime $49)",
+    ],
+    mustNot: [
+      "Pixel-clone of Uizze branding",
+      "A user-generated UI kit marketplace",
+      "A design editor or Figma clone",
+      "Team workspaces / SSO",
+    ],
+    metric: "A paid checkout or 20 MCP queries across 5 users in week one.",
+    demoLabel: "Refs",
+    url: "https://tastekit.wedgewerks.win",
+    deck: "A UI reference library your coding agent can query. 25 original references with build specs, served over MCP to Cursor, Claude Code and Codex.",
+    theJob: [
+      "Query a UI reference library from your coding agent",
+      "Built for indie AI builders on Cursor, Claude Code, and Codex",
+      "Not a design marketplace. Not a Figma clone.",
+    ],
+    whoItsFor: "Indie AI builders who want UI references their coding agent can query.",
+    whatItIsNot: "Not Uizze. Not a design editor. Not a component marketplace.",
+    metaTitle: "TasteKit — UI references your coding agent can query | WedgeWerks",
+    metaDescription:
+      "A UI reference library your coding agent can query. 25 original references with build specs, served over MCP to Cursor, Claude Code and Codex. Free 5 refs/day. Pro $9/mo. Built by WedgeWerks.",
   },
 ];
 
@@ -354,13 +394,13 @@ export const crew = [
   },
 ] as const;
 
-/** Dated sample — not a live ticker. All six products live. */
+/** Dated sample — not a live ticker. All seven products live. */
 export const logLines = [
   { time: "07:00", who: "RADAR", text: "scan complete — 14 AI listings, 2 overlap" },
   { time: "07:20", who: "DISPATCH", text: "ranked top 3 · default winner next wedge" },
-  { time: "07:31", who: "HUMAN", text: "hold · UserProbe · CiteDeck · VecClip · DocBrief · PromptKit · SkillPack all live" },
+  { time: "07:31", who: "HUMAN", text: "hold · UserProbe · CiteDeck · VecClip · DocBrief · PromptKit · SkillPack · TasteKit all live" },
   { time: "09:00", who: "FORGE", text: "idle — awaiting next approved wedge" },
-  { time: "17:00", who: "ANCHOR", text: "catalog: six live · no second build stacked" },
+  { time: "17:00", who: "ANCHOR", text: "catalog: seven live · no second build stacked" },
 ] as const;
 
 export const willNot = [

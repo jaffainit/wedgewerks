@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Container, SectionLabel } from "@/components/site-chrome";
+import { Container } from "@/components/site-chrome";
 import { getProduct, products } from "@/lib/studio";
 
 export const Route = createFileRoute("/products/$slug")({
@@ -32,35 +32,46 @@ function ProductPage() {
   return (
     <main id="main" className="flex-1">
       <section className="border-b border-line py-16 sm:py-20">
-        <Container className="max-w-4xl">
-          <h1 className="font-display text-headline tracking-tight">
-            {product.name}
-          </h1>
-          <p className="mt-5 max-w-2xl text-lede leading-relaxed text-muted">
-            {product.deck || product.wedge}
-          </p>
-          <div className="mt-8 flex flex-wrap items-center gap-4">
-            <div className="flex items-center gap-3">
-              <span className="font-display text-title tabular-nums text-fg">
-                {product.price}
-              </span>
-              {product.paymentUrl && (
-                <Button asChild>
-                  <a href={product.paymentUrl} target="_blank" rel="noreferrer">
-                    Subscribe — {product.name} Pro
-                    <ArrowUpRight className="size-4" />
-                  </a>
-                </Button>
-              )}
-              {product.url && (
-                <Button asChild>
-                  <a href={product.url} target="_blank" rel="noreferrer">
-                    Open {product.name}
-                    <ArrowUpRight className="size-4" />
-                  </a>
-                </Button>
-              )}
+        <Container className="grid max-w-4xl items-center gap-10 sm:grid-cols-[1fr_auto]">
+          <div>
+            <h1 className="font-display text-headline tracking-tight">
+              {product.name}
+            </h1>
+            <p className="mt-5 max-w-2xl text-lede leading-relaxed text-muted">
+              {product.deck || product.wedge}
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <div className="flex items-center gap-3">
+                <span className="font-display text-title tabular-nums text-fg">
+                  {product.price}
+                </span>
+                {product.paymentUrl && (
+                  <Button asChild>
+                    <a href={product.paymentUrl} target="_blank" rel="noreferrer">
+                      Subscribe — {product.name} Pro
+                      <ArrowUpRight className="size-4" />
+                    </a>
+                  </Button>
+                )}
+                {product.url && (
+                  <Button asChild>
+                    <a href={product.url} target="_blank" rel="noreferrer">
+                      Open {product.name}
+                      <ArrowUpRight className="size-4" />
+                    </a>
+                  </Button>
+                )}
+              </div>
             </div>
+          </div>
+          <div className="mx-auto flex size-40 items-center justify-center rounded-xl bg-elevated p-4 shadow-[var(--shadow-border)] sm:size-44">
+            <img
+              src={product.image}
+              alt={product.imageAlt}
+              width={512}
+              height={512}
+              className="h-full w-full object-contain"
+            />
           </div>
         </Container>
       </section>
