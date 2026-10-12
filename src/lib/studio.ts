@@ -363,6 +363,82 @@ export const products: Product[] = [
     metaDescription:
       "Backlink prospects and AI pitch drafts for indie SaaS founders. Ranked targets with a why-it-fits line, personalised outreach drafts, CSV export. Free tier. Pro $29/mo. Built by WedgeWerks.",
   },
+  {
+    slug: "actiondrop",
+    index: "09",
+    name: "ActionDrop",
+    status: "live",
+    price: "$6/mo",
+    wedge: "Solo operators with a pile of recurring tasks — plain-English instructions turned into send-ready drafts on a schedule.",
+    job: "Write an instruction once in plain English. ActionDrop drafts the output with AI on your schedule — every day, weekly, or at a set time — ready to review and send.",
+    forWhom: "Founders, freelancers and ops folks with recurring writing tasks.",
+    charge: "Free trial. Pro $6/mo (OpenAI engine).",
+    image: "/brand/logos/actiondrop.png",
+    imageAlt: "Indigo ActionDrop logo: an off-white paper plane with a coral dot.",
+    must: [
+      "One instruction, plain English",
+      "Scheduled AI drafts — daily, weekly, or timed",
+      "Review-and-send inbox, nothing auto-sends",
+      "Bring your own OpenAI key or use Pro",
+    ],
+    mustNot: [
+      "Autopilot emails without review",
+      "A generic chatbot",
+      "Team workspaces / SSO",
+    ],
+    metric: "A draft waiting in the inbox every morning from day one.",
+    demoLabel: "Drafts",
+    url: "https://actiondrop.wedgewerks.win",
+    deck: "Say it once. Done on schedule. Plain-English instructions become send-ready AI drafts, delivered on your schedule. Pro $6/mo.",
+    theJob: [
+      "Turn a standing instruction into a scheduled draft",
+      "Built for recurring writing: updates, posts, reports",
+      "Not an autopilot. Nothing sends without you.",
+    ],
+    whoItsFor: "Solo operators with recurring writing tasks.",
+    whatItIsNot: "Not an email sender. Not a chatbot. Not an autopilot.",
+    metaTitle: "ActionDrop — Say it once. Done on schedule. | WedgeWerks",
+    metaDescription:
+      "Plain-English instructions become send-ready AI drafts on your schedule. Review and send. Free trial, Pro $6/mo. Built by WedgeWerks.",
+  },
+  {
+    slug: "wedgewebsites",
+    index: "10",
+    name: "WedgeWebsites",
+    status: "live",
+    price: "from £260",
+    wedge: "Local businesses that need a website built around how their trade actually sells — not a generic template.",
+    job: "Pick your niche — dental, restaurant, law, construction, gym, salon, plumbing, landscaping — start from a working demo design, add mods like booking, live chat and deposits, and get a fixed-price quote in minutes. Live in 7–10 days.",
+    forWhom: "Trades, clinics and local firms with a real customer journey, not just a brochure.",
+    charge: "Landing £260 · 5-page site £479 · custom quoted. Mods priced flat. Care plan £25/mo.",
+    image: "/brand/logos/wedgewebsites.png",
+    imageAlt: "Indigo WedgeWebsites logo: an off-white browser window with three dots and a coral dot.",
+    must: [
+      "8 live demo designs across 8 niches",
+      "Fixed prices published — 20% under comparable UK options",
+      "Mods with honest pros and cons, priced flat",
+      "You own the code, domain and data",
+    ],
+    mustNot: [
+      "Rental sites that vanish if you cancel",
+      "Discovery-call pricing games",
+      "Page-one-overnight ranking promises",
+    ],
+    metric: "A niche demo on screen in 30 seconds, a fixed quote in 2 minutes.",
+    demoLabel: "Demos",
+    url: "https://wedgewebsites.wedgewerks.win",
+    deck: "Custom websites and landing pages, sold niche-first. Explore 8 working demo designs, mix in mods with honest trade-offs, and get a fixed quote — 20% under comparable UK options.",
+    theJob: [
+      "Show locals a site built for their trade, before they pay anything",
+      "Fixed published prices: landing £260, 5-page £479, mods flat",
+      "Not a template farm. Not a £3,000-agency retainer.",
+    ],
+    whoItsFor: "Trades, clinics, restaurants and local firms who need the website to do a job.",
+    whatItIsNot: "Not a DIY builder. Not a rental. Not an agency with quote theatrics.",
+    metaTitle: "WedgeWebsites — Custom niche websites, fixed prices | WedgeWerks",
+    metaDescription:
+      "Custom websites and landing pages for 8 niches. Explore live demo designs, pick mods with honest pros and cons, get a fixed quote from £260. Built by WedgeWerks.",
+  },
 ];
 
 export const pipeline = [
@@ -440,7 +516,7 @@ export const logLines = [
   { time: "07:20", who: "DISPATCH", text: "ranked top 3 · default winner next wedge" },
   { time: "07:31", who: "HUMAN", text: "hold · UserProbe · CiteDeck · VecClip · DocBrief · PromptKit · SkillPack · TasteKit · LinkPitch all live" },
   { time: "09:00", who: "FORGE", text: "idle — awaiting next approved wedge" },
-  { time: "17:00", who: "ANCHOR", text: "catalog: eight live · no second build stacked" },
+  { time: "17:00", who: "ANCHOR", text: "catalog: nine live + wedge websites · no second build stacked" },
 ] as const;
 
 export const willNot = [

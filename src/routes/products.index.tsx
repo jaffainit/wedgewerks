@@ -6,11 +6,11 @@ import { products, studio } from "@/lib/studio";
 export const Route = createFileRoute("/products/")({
   head: () => ({
     meta: [
-      { title: "Eight one-job tools — WedgeWerks catalog" },
+      { title: "Nine one-job tools — WedgeWerks catalog" },
       {
         name: "description",
         content:
-          "UserProbe, CiteDeck, VecClip, DocBrief, PromptKit, SkillPack, TasteKit, LinkPitch. Each a clear job-to-be-done. Simple subscription. Parent studio of Foundary.",
+          "UserProbe, CiteDeck, VecClip, DocBrief, PromptKit, SkillPack, TasteKit, LinkPitch, ActionDrop. Each a clear job-to-be-done. Simple subscription. Parent studio of Foundary.",
       },
     ],
     links: ([{ rel: "canonical", href: "https://www.wedgewerks.win/products" }]),
@@ -25,10 +25,10 @@ function ProductsIndex() {
         <Container>
           <SectionLabel>Catalog</SectionLabel>
           <h1 className="mt-4 max-w-3xl font-display text-headline tracking-tight">
-            Eight tools. Each one job. Sold as a subscription.
+            Nine tools. Each one job. Sold as a subscription.
           </h1>
           <p className="mt-5 max-w-2xl text-lede leading-relaxed text-muted">
-            {studio.manifesto} UserProbe, CiteDeck, VecClip, DocBrief, PromptKit, SkillPack, TasteKit, and LinkPitch are live.
+            {studio.manifesto} UserProbe, CiteDeck, VecClip, DocBrief, PromptKit, SkillPack, TasteKit, LinkPitch, and ActionDrop are live — plus WedgeWebsites, our custom-site arm for niches that need a website built around how they sell.
           </p>
         </Container>
       </section>
