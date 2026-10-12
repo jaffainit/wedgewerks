@@ -23,7 +23,7 @@ export const Route = createRootRoute({
         content:
           "WedgeWerks is a small product factory. We find fast-growing AI wedges, pick one, and ship a paid MVP in days.",
       },
-      { name: "theme-color", content: "#0b0b0a" },
+      { name: "theme-color", content: "#f4f0e6" },
       { name: "apple-mobile-web-app-title", content: APP_NAME },
       { name: "application-name", content: "WedgeWerks" },
     ],
