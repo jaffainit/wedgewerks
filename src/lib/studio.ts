@@ -510,11 +510,11 @@ export const crew = [
   },
 ] as const;
 
-/** Dated sample — not a live ticker. All eight products live. */
+/** Dated sample — not a live ticker. All ten products live. */
 export const logLines = [
   { time: "07:00", who: "RADAR", text: "scan complete — 14 AI listings, 2 overlap" },
   { time: "07:20", who: "DISPATCH", text: "ranked top 3 · default winner next wedge" },
-  { time: "07:31", who: "HUMAN", text: "hold · UserProbe · CiteDeck · VecClip · DocBrief · PromptKit · SkillPack · TasteKit · LinkPitch all live" },
+  { time: "07:31", who: "HUMAN", text: "hold · UserProbe · CiteDeck · VecClip · DocBrief · PromptKit · SkillPack · TasteKit · LinkPitch · ActionDrop · WedgeWebsites all live" },
   { time: "09:00", who: "FORGE", text: "idle — awaiting next approved wedge" },
   { time: "17:00", who: "ANCHOR", text: "catalog: nine live + wedge websites · no second build stacked" },
 ] as const;
