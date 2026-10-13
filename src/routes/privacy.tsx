@@ -29,8 +29,8 @@ function PrivacyPage() {
           <p className="mt-5 text-lede leading-relaxed text-muted">
             This notice explains how {studio.mark} handles personal data for our
             studio site and catalog products (UserProbe, CiteDeck, VecClip,
-            DocBrief, PromptKit, SkillPack, TasteKit, LinkPitch, and ActionDrop). Written for people in the UK and EU. Last updated 12
-            September 2026.
+            DocBrief, PromptKit, SkillPack, TasteKit, LinkPitch, ActionDrop, and StashLine). Written for people in the UK and EU. Last updated 13
+            October 2026.
           </p>
         </Container>
       </section>
@@ -86,8 +86,11 @@ function PrivacyPage() {
               </li>
               <li>
                 <span className="text-fg">Payment metadata</span> — Stripe
-                customer / subscription identifiers. Card numbers never touch
-                our servers; Stripe is the payment processor.
+                customer / subscription identifiers. For StashLine, we also store
+                the unlock code issued for your checkout so it can be re-entered
+                and revoked if a monthly plan ends; StashLine&apos;s ledger itself
+                stays in your browser. Card numbers never touch our servers;
+                Stripe is the payment processor.
               </li>
             </ul>
           </div>
