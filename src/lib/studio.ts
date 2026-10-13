@@ -550,7 +550,7 @@ export const crew = [
   },
 ] as const;
 
-/** Dated sample — not a live ticker. All eleven products live. */
+/** Dated sample — not a live ticker. Ten live tools + WedgeWebsites. */
 export const logLines = [
   { time: "07:00", who: "RADAR", text: "scan complete — 14 AI listings, 2 overlap" },
   { time: "07:20", who: "DISPATCH", text: "ranked top 3 · default winner next wedge" },
