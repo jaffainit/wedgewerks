@@ -439,6 +439,44 @@ export const products: Product[] = [
     metaDescription:
       "Custom websites and landing pages for 8 niches. Explore live demo designs, pick mods with honest pros and cons, get a fixed quote from £260. Built by WedgeWerks.",
   },
+  {
+    slug: "stashline",
+    index: "11",
+    name: "StashLine",
+    status: "live",
+    price: "$1.99/mo",
+    wedge: "Budgeters who want their money on paper — tracked locally, without an account, without a spreadsheet.",
+    job: "Accounts, transactions and monthly budget bars that live in your browser — no signup, no cloud, no data leaving your device. Pro adds recurring rules that backfill themselves, exports and unlimited accounts.",
+    forWhom: "Savers, budgeting beginners and anyone allergic to finance apps harvesting their data.",
+    charge: "Free (2 accounts, 25 txs/mo). Pro $1.99/mo or $29 lifetime.",
+    image: "/brand/logos/stashline.png",
+    imageAlt: "Indigo StashLine logo: an off-white coin jar with a lid and a coral coin dropping in.",
+    must: [
+      "Local-first: data never leaves your browser",
+      "No account, no signup — open and use it",
+      "Pro recurring rules that backfill missed days automatically",
+      "CSV / JSON export, import with confirm",
+    ],
+    mustNot: [
+      "Cloud sync you didn't ask for",
+      "An account harvest",
+      "A spreadsheet replacement with formulas",
+    ],
+    metric: "A fresh budget tracked in 60 seconds, offline.",
+    demoLabel: "Ledger",
+    url: "https://stashline.wedgewerks.win",
+    deck: "Your money, on paper. Yours only. A local-first expense tracker: accounts, budgets and recurring rules in your browser — no account, no cloud. Pro $1.99/mo or $29 lifetime.",
+    theJob: [
+      "Track accounts and monthly budgets without giving up your data",
+      "Recurring rules post themselves, even after days away",
+      "Not a bank feed. Not a cloud ledger.",
+    ],
+    whoItsFor: "Savers and budgeting beginners who want the tracker to be dumb, local and honest.",
+    whatItIsNot: "Not a cloud ledger. Not a bank feed. Not Mint.",
+    metaTitle: "StashLine — Local-first expense tracker. No account. | WedgeWerks",
+    metaDescription:
+      "Accounts, budgets and recurring rules in your browser — no signup, no cloud. Free for everyday tracking; Pro $1.99/mo or $29 lifetime. Built by WedgeWerks.",
+  },
 ];
 
 export const pipeline = [
@@ -510,13 +548,13 @@ export const crew = [
   },
 ] as const;
 
-/** Dated sample — not a live ticker. All ten products live. */
+/** Dated sample — not a live ticker. All eleven products live. */
 export const logLines = [
   { time: "07:00", who: "RADAR", text: "scan complete — 14 AI listings, 2 overlap" },
   { time: "07:20", who: "DISPATCH", text: "ranked top 3 · default winner next wedge" },
-  { time: "07:31", who: "HUMAN", text: "hold · UserProbe · CiteDeck · VecClip · DocBrief · PromptKit · SkillPack · TasteKit · LinkPitch · ActionDrop · WedgeWebsites all live" },
+  { time: "07:31", who: "HUMAN", text: "hold · all 11 products live — wedge websites excluded from count" },
   { time: "09:00", who: "FORGE", text: "idle — awaiting next approved wedge" },
-  { time: "17:00", who: "ANCHOR", text: "catalog: nine live + wedge websites · no second build stacked" },
+  { time: "17:00", who: "ANCHOR", text: "catalog: ten live + wedge websites · no second build stacked" },
 ] as const;
 
 export const willNot = [
