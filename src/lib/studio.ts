@@ -404,7 +404,6 @@ export const products: Product[] = [
       "Describe a task in plain English and get a send-ready email or message draft. You copy it and send it yourself. Free 3 drafts a day, Pro $6/mo. Built by WedgeWerks.",
   },
 ];
-];
 
 export const pipeline = [
   {
