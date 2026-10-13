@@ -29,7 +29,7 @@ function PrivacyPage() {
           <p className="mt-5 text-lede leading-relaxed text-muted">
             This notice explains how {studio.mark} handles personal data for our
             studio site and catalog products (UserProbe, CiteDeck, VecClip,
-            DocBrief, PromptKit, SkillPack, TasteKit, and LinkPitch). Written for people in the UK and EU. Last updated 12
+            DocBrief, PromptKit, SkillPack, TasteKit, LinkPitch, and ActionDrop). Written for people in the UK and EU. Last updated 12
             September 2026.
           </p>
         </Container>
@@ -74,8 +74,9 @@ function PrivacyPage() {
                 lecture PDFs / PPTX (CiteDeck), short MP4s (VecClip), briefs /
                 scripts and generated VO assets (DocBrief), probe answers
                 (UserProbe), prompt snippets (PromptKit), installed skill
-                packs (SkillPack), UI references queried via MCP (TasteKit), and
-                site URLs, keywords and pitch drafts (LinkPitch)
+                packs (SkillPack), UI references queried via MCP (TasteKit),
+                site URLs, keywords and pitch drafts (LinkPitch), and task
+                descriptions sent to OpenAI to write drafts (ActionDrop)
                 needed to do the job you paid for.
               </li>
               <li>
