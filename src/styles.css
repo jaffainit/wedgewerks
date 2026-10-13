@@ -2,21 +2,21 @@
 @import "tailwindcss";
 
 @theme {
-  /* Paper & Lead — light editorial theme (chosen mockup 2) */
-  --color-bg: #f4f0e6;
-  --color-surface: #ece6d6;
-  --color-elevated: #e7e0cf;
-  --color-fg: #151310;
-  --color-muted: #6f6759;
-  --color-subtle: #766e5f;
-  --color-accent: #0a4f2e;
-  --color-accent-fg: #f4f0e6;
-  --color-border: #15131026;
-  --color-line: #1513101a;
-  --color-danger: #c2410c;
+  /* Quarterly — white swiss/brutalist theme (chosen template D) */
+  --color-bg: #ffffff;
+  --color-surface: #fafaf8;
+  --color-elevated: #f2f2ef;
+  --color-fg: #111114;
+  --color-muted: #66666d;
+  --color-subtle: #74747c;
+  --color-accent: #e0470f;
+  --color-accent-fg: #ffffff;
+  --color-border: #1111142e;
+  --color-line: #e7e7e9;
+  --color-danger: #c41e1e;
 
-  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Instrument Serif", ui-serif, Georgia, "Times New Roman", serif;
+  --font-sans: Inter, "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: Inter, "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 
   --text-display: clamp(2.75rem, 2rem + 6vw, 6.25rem);
@@ -24,14 +24,14 @@
   --text-title: clamp(1.35rem, 1.1rem + 1.1vw, 1.85rem);
   --text-lede: clamp(1.05rem, 0.95rem + 0.4vw, 1.2rem);
 
-  --radius-xs: 0.25rem;
-  --radius-sm: 0.5rem;
-  --radius-md: 0.75rem;
-  --radius-lg: 1rem;
-  --radius-xl: 1.5rem;
+  --radius-xs: 0;
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 2px;
+  --radius-xl: 3px;
 
-  --shadow-border: 0 0 0 1px rgba(21, 19, 16, 0.1);
-  --shadow-border-hover: 0 0 0 1px rgba(21, 19, 16, 0.2);
+  --shadow-border: 0 0 0 1px #1111141f;
+  --shadow-border-hover: 0 0 0 1px #11111438;
 
   --ease-smooth-out: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);

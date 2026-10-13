@@ -61,7 +61,7 @@ export const products: Product[] = [
     job: "Run a five-question async probe and get a job-to-be-done synthesis with pull-quotes in hours, not a quarter.",
     forWhom: "Founders and PMs shipping alone.",
     charge: "Simple monthly seat. No per-interview tax.",
-    image: "/brand/logos/userprobe.png",
+    image: "/brand/logos/userprobe.svg",
     imageAlt: "Indigo UserProbe logo: an off-white magnifying glass around a person, with a coral dot.",
     must: [
       "Five-question probe templates",
@@ -100,7 +100,7 @@ export const products: Product[] = [
     job: "Upload lecture PDFs or PPTX. Get structured notes, flashcards, and a quiz where every claim cites a page or slide.",
     forWhom: "Students and bootcamp learners using their own materials.",
     charge: "Pro $12/mo. Free tier included.",
-    image: "/brand/logos/citedeck.png",
+    image: "/brand/logos/citedeck.svg",
     imageAlt: "Indigo CiteDeck logo: a stack of off-white note cards with a coral quotation mark.",
     must: [
       "PDF and PPTX upload",
@@ -138,7 +138,7 @@ export const products: Product[] = [
     job: "Convert a short MP4 into a path-morphing animated SVG you can drop on a site.",
     forWhom: "Indie designers and front-end builders.",
     charge: "Pro $19/mo via Stripe Checkout.",
-    image: "/brand/logos/vecclip.png",
+    image: "/brand/logos/vecclip.svg",
     imageAlt: "Indigo VecClip logo: an off-white film strip with a coral path-morphing trail.",
     must: [
       "MP4 upload",
@@ -176,7 +176,7 @@ export const products: Product[] = [
     job: "Paste a topic or rough script. Get a polished voiceover script, TTS, B-roll stills, burned-in captions, and a downloadable MP4.",
     forWhom: "Faceless / solo YouTube creators.",
     charge: "Free (1 short render). Starter $12/mo. Creator $36/mo via Stripe Checkout.",
-    image: "/brand/logos/docbrief.png",
+    image: "/brand/logos/docbrief.svg",
     imageAlt: "Indigo DocBrief logo: an off-white document with a coral play mark.",
     must: [
       "Brief → polished script",
@@ -215,7 +215,7 @@ export const products: Product[] = [
     job: "Save reusable prompt snippets from Claude.ai, sync them to your account, and one-click insert them back into the composer.",
     forWhom: "Solo builders and PMs who live in Claude.ai daily.",
     charge: "Free (10 snippets). Pro $4/mo unlimited. Lifetime $28.",
-    image: "/brand/logos/promptkit.png",
+    image: "/brand/logos/promptkit.svg",
     imageAlt: "Indigo PromptKit logo: an off-white briefcase with a coral command prompt.",
     must: [
       "Chrome MV3 extension on claude.ai",
@@ -254,7 +254,7 @@ export const products: Product[] = [
     job: "Curated, installable agent skills for Cursor, Claude Code and Codex. Browse free, Pro unlocks the full library.",
     forWhom: "Indie AI builders on Cursor / Claude Code.",
     charge: "Free browse. Pro $9/mo. Lifetime $49.",
-    image: "/brand/logos/skillpack.png",
+    image: "/brand/logos/skillpack.svg",
     imageAlt: "Indigo SkillPack logo: an off-white backpack with a coral lightning bolt.",
     must: [
       "Browse curated agent skills for Cursor, Claude Code, and Codex",
@@ -294,7 +294,7 @@ export const products: Product[] = [
     job: "A UI reference library your coding agent can query. 25 original references with build specs, served over MCP to Cursor, Claude Code and Codex.",
     forWhom: "Indie AI builders on Cursor / Claude Code / Codex.",
     charge: "Free shows 5 refs/day. Pro $9/mo. Lifetime $49.",
-    image: "/brand/logos/tastekit.png",
+    image: "/brand/logos/tastekit.svg",
     imageAlt: "Indigo TasteKit logo: an off-white UI window with a coral sparkle.",
     must: [
       "25 original UI references with build specs",
@@ -334,7 +334,7 @@ export const products: Product[] = [
     job: "Enter your site and niche keywords. Get a ranked list of relevant backlink targets, each with a \"why it fits\" line, plus one-click personalised outreach drafts you edit, approve and export as CSV.",
     forWhom: "Indie SaaS founders doing their own link building.",
     charge: "Free (1 campaign, 10 prospects, 3 drafts). Pro $29/mo.",
-    image: "/brand/logos/linkpitch.png",
+    image: "/brand/logos/linkpitch.svg",
     imageAlt: "Indigo LinkPitch logo: an off-white chain link and paper plane with a coral sparkle.",
     must: [
       "Ranked backlink prospects from your site and niche keywords",
@@ -373,7 +373,7 @@ export const products: Product[] = [
     job: "Write an instruction once in plain English. ActionDrop drafts the output with AI on your schedule — every day, weekly, or at a set time — ready to review and send.",
     forWhom: "Founders, freelancers and ops folks with recurring writing tasks.",
     charge: "Free trial. Pro $6/mo (OpenAI engine).",
-    image: "/brand/logos/actiondrop.png",
+    image: "/brand/logos/actiondrop.svg",
     imageAlt: "Indigo ActionDrop logo: an off-white paper plane with a coral dot.",
     must: [
       "One instruction, plain English",
@@ -411,7 +411,7 @@ export const products: Product[] = [
     job: "Pick your niche — dental, restaurant, law, construction, gym, salon, plumbing, landscaping — start from a working demo design, add mods like booking, live chat and deposits, and get a fixed-price quote in minutes. Live in 7–10 days.",
     forWhom: "Trades, clinics and local firms with a real customer journey, not just a brochure.",
     charge: "Landing £260 · 5-page site £479 · custom quoted. Mods priced flat. Care plan £25/mo.",
-    image: "/brand/logos/wedgewebsites.png",
+    image: "/brand/logos/wedgewebsites.svg",
     imageAlt: "Indigo WedgeWebsites logo: an off-white browser window with three dots and a coral dot.",
     must: [
       "8 live demo designs across 8 niches",
@@ -449,7 +449,7 @@ export const products: Product[] = [
     job: "Accounts, transactions and monthly budget bars that live in your browser — no signup, no cloud, no data leaving your device. Pro adds recurring rules that backfill themselves, exports and unlimited accounts.",
     forWhom: "Savers, budgeting beginners and anyone allergic to finance apps harvesting their data.",
     charge: "Free (2 accounts, 25 txs/mo). Pro $1.99/mo or $29 lifetime.",
-    image: "/brand/logos/stashline.png",
+    image: "/brand/logos/stashline.svg",
     imageAlt: "Indigo StashLine logo: an off-white coin jar with a lid and a coral coin dropping in.",
     must: [
       "Local-first: data never leaves your browser",
