@@ -403,82 +403,7 @@ export const products: Product[] = [
     metaDescription:
       "Describe a task in plain English and get a send-ready email or message draft. You copy it and send it yourself. Free 3 drafts a day, Pro $6/mo. Built by WedgeWerks.",
   },
-  {
-    slug: "wedgewebsites",
-    index: "10",
-    name: "WedgeWebsites",
-    status: "live",
-    price: "from £260",
-    wedge: "Local businesses that need a website built around how their trade actually sells — not a generic template.",
-    job: "Pick your niche — dental, restaurant, law, construction, gym, salon, plumbing, landscaping — start from a working demo design, add mods like booking, live chat and deposits, and get a fixed-price quote in minutes. Live in 7–10 days.",
-    forWhom: "Trades, clinics and local firms with a real customer journey, not just a brochure.",
-    charge: "Landing £260 · 5-page site £479 · custom quoted. Mods priced flat. Care plan £25/mo.",
-    image: "/brand/logos/wedgewebsites.svg",
-    imageAlt: "Indigo WedgeWebsites logo: an off-white browser window with three dots and a coral dot.",
-    must: [
-      "8 live demo designs across 8 niches",
-      "Fixed prices published — 20% under comparable UK options",
-      "Mods with honest pros and cons, priced flat",
-      "You own the code, domain and data",
-    ],
-    mustNot: [
-      "Rental sites that vanish if you cancel",
-      "Discovery-call pricing games",
-      "Page-one-overnight ranking promises",
-    ],
-    metric: "A niche demo on screen in 30 seconds, a fixed quote in 2 minutes.",
-    demoLabel: "Demos",
-    url: "https://wedgewebsites.wedgewerks.win",
-    deck: "Custom websites and landing pages, sold niche-first. Explore 8 working demo designs, mix in mods with honest trade-offs, and get a fixed quote — 20% under comparable UK options.",
-    theJob: [
-      "Show locals a site built for their trade, before they pay anything",
-      "Fixed published prices: landing £260, 5-page £479, mods flat",
-      "Not a template farm. Not a £3,000-agency retainer.",
-    ],
-    whoItsFor: "Trades, clinics, restaurants and local firms who need the website to do a job.",
-    whatItIsNot: "Not a DIY builder. Not a rental. Not an agency with quote theatrics.",
-    metaTitle: "WedgeWebsites — Custom niche websites, fixed prices | WedgeWerks",
-    metaDescription:
-      "Custom websites and landing pages for 8 niches. Explore live demo designs, pick mods with honest pros and cons, get a fixed quote from £260. Built by WedgeWerks.",
-  },
-  {
-    slug: "stashline",
-    index: "11",
-    name: "StashLine",
-    status: "live",
-    price: "$1.99/mo",
-    wedge: "Budgeters who want their money on paper — tracked locally, without an account, without a spreadsheet.",
-    job: "Accounts, transactions and monthly budget bars that live in your browser — no signup, no cloud, no data leaving your device. Pro adds recurring rules that backfill themselves, exports and unlimited accounts.",
-    forWhom: "Savers, budgeting beginners and anyone allergic to finance apps harvesting their data.",
-    charge: "Free (2 accounts, 25 txs/mo). Pro $1.99/mo or $29 lifetime.",
-    image: "/brand/logos/stashline.svg",
-    imageAlt: "Indigo StashLine logo: an off-white coin jar with a lid and a coral coin dropping in.",
-    must: [
-      "Local-first: data never leaves your browser",
-      "No account, no signup — open and use it",
-      "Pro recurring rules that backfill missed days automatically",
-      "CSV / JSON export, import with confirm",
-    ],
-    mustNot: [
-      "Cloud sync you didn't ask for",
-      "An account harvest",
-      "A spreadsheet replacement with formulas",
-    ],
-    metric: "A fresh budget tracked in 60 seconds, offline.",
-    demoLabel: "Ledger",
-    url: "https://stashline.wedgewerks.win",
-    deck: "Your money, on paper. Yours only. A local-first expense tracker: accounts, budgets and recurring rules in your browser — no account, no cloud. Pro $1.99/mo or $29 lifetime.",
-    theJob: [
-      "Track accounts and monthly budgets without giving up your data",
-      "Recurring rules post themselves, even after days away",
-      "Not a bank feed. Not a cloud ledger.",
-    ],
-    whoItsFor: "Savers and budgeting beginners who want the tracker to be dumb, local and honest.",
-    whatItIsNot: "Not a cloud ledger. Not a bank feed. Not Mint.",
-    metaTitle: "StashLine — Local-first expense tracker. No account. | WedgeWerks",
-    metaDescription:
-      "Accounts, budgets and recurring rules in your browser — no signup, no cloud. Free for everyday tracking; Pro $1.99/mo or $29 lifetime. Built by WedgeWerks.",
-  },
+];
 ];
 
 export const pipeline = [
@@ -550,13 +475,13 @@ export const crew = [
   },
 ] as const;
 
-/** Dated sample — not a live ticker. Ten live tools + WedgeWebsites. */
+/** Dated sample — not a live ticker. All ten products live. */
 export const logLines = [
   { time: "07:00", who: "RADAR", text: "scan complete — 14 AI listings, 2 overlap" },
   { time: "07:20", who: "DISPATCH", text: "ranked top 3 · default winner next wedge" },
-  { time: "07:31", who: "HUMAN", text: "hold · all 11 products live — wedge websites excluded from count" },
+  { time: "07:31", who: "HUMAN", text: "hold · UserProbe · CiteDeck · VecClip · DocBrief · PromptKit · SkillPack · TasteKit · LinkPitch · ActionDrop · StashLine all live" },
   { time: "09:00", who: "FORGE", text: "idle — awaiting next approved wedge" },
-  { time: "17:00", who: "ANCHOR", text: "catalog: ten live + wedge websites · no second build stacked" },
+  { time: "17:00", who: "ANCHOR", text: "catalog: ten live · no second build stacked" },
 ] as const;
 
 export const willNot = [

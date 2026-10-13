@@ -119,20 +119,7 @@ function FoundaryPage() {
           </Button>
         </Container>
       </section>
-      <section className="border-t border-line py-10">
-        <Container className="flex flex-wrap items-center justify-between gap-4 text-sm text-muted">
-          <span>
-            Need a website for your business rather than a tool?{" "}
-            <a
-              href="https://wedgewebsites.wedgewerks.win"
-              className="text-accent underline-offset-4 hover:underline"
-            >
-              Wedgesites — the client-services arm →
-            </a>
-          </span>
-          <span>Contact: info@wedgewerks.win</span>
-        </Container>
-      </section>
+      
     </main>
   );
 }

@@ -28,7 +28,7 @@ function ProductsIndex() {
             Ten tools. Each one job. Sold as a subscription.
           </h1>
           <p className="mt-5 max-w-2xl text-lede leading-relaxed text-muted">
-            {studio.manifesto} UserProbe, CiteDeck, VecClip, DocBrief, PromptKit, SkillPack, TasteKit, LinkPitch, ActionDrop, and StashLine are live — plus Wedgesites, our custom-site arm for niches that need a website built around how they sell.
+            {studio.manifesto} UserProbe, CiteDeck, VecClip, DocBrief, PromptKit, SkillPack, TasteKit, LinkPitch, ActionDrop, and StashLine are live.
           </p>
         </Container>
       </section>
