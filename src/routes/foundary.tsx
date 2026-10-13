@@ -127,7 +127,7 @@ function FoundaryPage() {
               href="https://wedgewebsites.wedgewerks.win"
               className="text-accent underline-offset-4 hover:underline"
             >
-              WedgeWebsites — the client-services arm →
+              Wedgesites — the client-services arm →
             </a>
           </span>
           <span>Contact: info@wedgewerks.win</span>
