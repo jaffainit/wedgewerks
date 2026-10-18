@@ -263,7 +263,7 @@ export const products: Product[] = [
       "Stripe Checkout Free → Pro $9/mo (+ Lifetime $49)",
     ],
     mustNot: [
-      "Pixel-clone of Skillry branding",
+      "Own branding, own UI.",
       "A user-generated skill marketplace",
       "An agent runtime or IDE",
       "Team workspaces / SSO",
@@ -278,7 +278,7 @@ export const products: Product[] = [
       "Not a skill marketplace. Not an agent runtime.",
     ],
     whoItsFor: "Indie AI builders on Cursor / Claude Code.",
-    whatItIsNot: "Not Skillry. Not an IDE. Not an agent runtime.",
+    whatItIsNot: "Not an IDE. Not an agent runtime.",
     metaTitle: "SkillPack — Installable agent skills for Cursor and Claude Code | WedgeWerks",
     metaDescription:
       "Curated, installable agent skills for Cursor, Claude Code and Codex. Browse free. Pro $9/mo. Built by WedgeWerks.",
@@ -303,7 +303,7 @@ export const products: Product[] = [
       "Stripe Checkout Free → Pro $9/mo (+ Lifetime $49)",
     ],
     mustNot: [
-      "Pixel-clone of Uizze branding",
+      "Own branding, own UI.",
       "A user-generated UI kit marketplace",
       "A design editor or Figma clone",
       "Team workspaces / SSO",
@@ -318,7 +318,7 @@ export const products: Product[] = [
       "Not a design marketplace. Not a Figma clone.",
     ],
     whoItsFor: "Indie AI builders who want UI references their coding agent can query.",
-    whatItIsNot: "Not Uizze. Not a design editor. Not a component marketplace.",
+    whatItIsNot: "Not a design editor. Not a component marketplace.",
     metaTitle: "TasteKit — UI references your coding agent can query | WedgeWerks",
     metaDescription:
       "A UI reference library your coding agent can query. 25 original references with build specs, served over MCP to Cursor, Claude Code and Codex. Free 5 refs/day. Pro $9/mo. Built by WedgeWerks.",
@@ -343,7 +343,7 @@ export const products: Product[] = [
       "Stripe Checkout Free → Pro $29/mo",
     ],
     mustNot: [
-      "Pixel-clone of ElvixAI branding",
+      "Own branding, own UI.",
       "Sending email from your inbox",
       "A full SEO suite or rank tracker",
       "Team workspaces / SSO",
@@ -358,7 +358,7 @@ export const products: Product[] = [
       "Edit, approve and export as CSV. You send it yourself; nothing goes out from your inbox.",
     ],
     whoItsFor: "Indie SaaS founders who want backlinks without hiring a link-building agency.",
-    whatItIsNot: "Not ElvixAI. Not an email sender. Not a full SEO suite.",
+    whatItIsNot: "Not an email sender. Not a full SEO suite.",
     metaTitle: "LinkPitch — Backlink prospects and AI pitch drafts for indie SaaS | WedgeWerks",
     metaDescription:
       "Backlink prospects and AI pitch drafts for indie SaaS founders. Ranked targets with a why-it-fits line, personalised outreach drafts, CSV export. Free tier. Pro $29/mo. Built by WedgeWerks.",
