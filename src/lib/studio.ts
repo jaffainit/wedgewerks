@@ -250,7 +250,7 @@ export const products: Product[] = [
     status: "live",
     price: "$9/mo",
     wedge:
-      "TrustMRR mover Skillry (Agent Skills library) — curated, installable skills for Cursor, Claude Code, and Codex.",
+      "Indie AI builders on Cursor and Claude Code who want installable agent skills.",
     job: "Curated, installable agent skills for Cursor, Claude Code and Codex. Browse free, Pro unlocks the full library.",
     forWhom: "Indie AI builders on Cursor / Claude Code.",
     charge: "Free browse. Pro $9/mo. Lifetime $49.",
@@ -290,7 +290,7 @@ export const products: Product[] = [
     status: "live",
     price: "$9/mo",
     wedge:
-      "TrustMRR mover Uizze (UI reference library) — a UI reference library your coding agent can query.",
+      "Indie AI builders who want UI references their coding agent can query.",
     job: "A UI reference library your coding agent can query. 25 original references with build specs, served over MCP to Cursor, Claude Code and Codex.",
     forWhom: "Indie AI builders on Cursor / Claude Code / Codex.",
     charge: "Free shows 5 refs/day. Pro $9/mo. Lifetime $49.",
@@ -330,7 +330,7 @@ export const products: Product[] = [
     status: "live",
     price: "$29/mo",
     wedge:
-      "A thin version of ElvixAI — backlink prospects and AI pitch drafts for indie SaaS founders.",
+      "Indie SaaS founders who want backlinks without hiring a link-building agency.",
     job: "Enter your site and niche keywords. Get a ranked list of relevant backlink targets, each with a \"why it fits\" line, plus one-click personalised outreach drafts you edit, approve and export as CSV.",
     forWhom: "Indie SaaS founders doing their own link building.",
     charge: "Free (1 campaign, 10 prospects, 3 drafts). Pro $29/mo.",
