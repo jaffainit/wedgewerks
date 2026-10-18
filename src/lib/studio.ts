@@ -189,7 +189,7 @@ export const products: Product[] = [
       "Character-consistent multi-cast GPU video",
       "Seedance / Kling",
       "YouTube OAuth publish",
-      "Viducer pixel-clone branding",
+      "Own branding, own UI.",
     ],
     metric: "A short captioned MP4 from a brief in one generate.",
     demoLabel: "MP4",
@@ -224,7 +224,7 @@ export const products: Product[] = [
       "Stripe Checkout Free → Pro $4/mo (+ Lifetime $28)",
     ],
     mustNot: [
-      "Pixel-clone of ClaudeKit branding",
+      "Own branding, own UI.",
       "Full Claude thread fork graph",
       "Multi-LLM beyond Claude.ai",
       "Team workspaces / SSO",
